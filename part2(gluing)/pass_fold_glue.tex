@@ -672,7 +672,7 @@ which is defined on a dense subset $\mathcal{D}(A_r) \subset \mathcal{C}_r$.
 \begin{proposition}\label{inv_A_r}
 The linear operator $A_r(u_0,\eps) : \mathcal{D}\subset \mathcal{C}_r \to \mathcal{C}_r\times \mathbb{R}$ is invertible, with its inverse 
 \[
-A_r^{-1}(u_0,\eps) : \mathcal{C}_r \times \mathbb{R} \to \mathbb{R}
+A_r^{-1}(u_0,\eps) : \mathcal{C}_r \times \mathbb{R} \to \mathcal{C}_r
 \]
 bounded uniformly in $u_0 \in (\bar{u}_0-\eta, \bar{u}_0+\eta)$ and $\eps \in (-\eps_A,\eps_A)$ with $\eta, \eps_A >0$ defined in Theorem \ref{thm:r}.
 
@@ -881,7 +881,7 @@ We now use Proposition \ref{inv_A_r} to precondition the above equation with the
 \begin{equation}\label{fix_pt:r}
  W_r = \mathcal{S}_r(W_r;\eps,u_0):= A_r^{-1}(\eps^{-1/3}\varphi \mathcal{R}_r(W_r), 0).
 \end{equation}
-Note that by Proposition \ref{inv_A_r} and Proposition \ref{nl_est_r}, $\mathcal{S}_r$ is well defined and maps from $\mathcal{C}_r$ into $\mathcal{C}_r$ with $\eps$ and $u_0$ as parameters. Moreover, we have 
+Note that by Proposition \ref{inv_A_r} and Proposition \ref{nl_est_r}, $\mathcal{S}_r$ is well defined and maps $\mathcal{C}_r$ into $\mathcal{C}_r$ with $\eps$ and $u_0$ as parameters. Moreover, we have 
 \begin{itemize}
 \item At $W_r=0$ it holds that
 \[
@@ -936,12 +936,12 @@ C_1 \lar \text{Lip}_{W_r} |\eps^{-1/3}\varphi R_r(W_r)| = \rmO(\delta_+^{1-\alph
 
 To estimate $C_2$. We notice that 
 \[
-\text{Lip}_{u_0} \mathcal{S}_r \le \text{Lip}_{u_0} |A^{-1}| \cdot \sup_{\sigma}|\eps^{-1/3}\mathcal{R}(W_r)|+ \|A_r^{-1}\| \cdot \text{Lip}_{u_0} |\eps^{-1/3}\varphi\mathcal{R}(W_r)|
+\text{Lip}_{u_0} \mathcal{S}_r \le \text{Lip}_{u_0} A_r^{-1} \cdot \sup_{\sigma}|\eps^{-1/3}\mathcal{R}(W_r)|+ \sup_{u_0}\|A_r^{-1}\| \cdot \text{Lip}_{u_0} |\eps^{-1/3}\varphi\mathcal{R}(W_r)|
 \]
 
 First from the estimate \eqref{Lip:Ar_inv} in Proposition \ref{inv_A_r}, we have
 \[
-\text{Lip}_{u_0} |A^{-1}| \cdot \sup|\eps^{-1/3}\mathcal{R}(W_r)| \lar \sup_{\sigma}|\eps^{-1/3}\mathcal{R}(W_r)| \lar \sup_{\sigma}|\eps^{-1/3}U_*^3| =  \rmO(\delta_+^2).
+\text{Lip}_{u_0}  A_r^{-1}  \cdot \sup|\eps^{-1/3}\mathcal{R}(W_r)| \lar \sup_{\sigma}|\eps^{-1/3}\mathcal{R}(W_r)| \lar \sup_{\sigma}|\eps^{-1/3}U_*^3| =  \rmO(\delta_+^2).
 \]
 Then we observe that
 \[
@@ -949,23 +949,23 @@ Then we observe that
 \]
 However if $u_0, \tilde{u}_0$ are two different numbers near $\bar{u}_0$, then
 \[
-\|\eps^{-1/3}\varphi [U_*^3(\sigma;u_0)-U_*^3(\sigma;\tilde{u}_0)] \|_{\mathcal{C}_r} \le \|\eps^{-1/3}\varphi U_*^2 \|_{\mathcal{C}_r} \sup|U_*(\sigma;u_0)-U_*(\sigma;\tilde{u}_0)|,
+\|\eps^{-1/3}\varphi [U_*^3(\sigma;u_0)-U_*^3(\sigma;\tilde{u}_0)] \|_{\mathcal{C}_r} \le \|\eps^{-1/3}\varphi U_*^2 \|_{\mathcal{C}_r} \sup|U_*(\sigma;u_0)-U_*(\sigma;\tilde{u}_0)|.
 \] 
-moreover, by Proposition \ref{ric_exp},
+Moreover, by Proposition \ref{ric_exp},
 $U_*(\sigma;u_0)= \eps^{1/3}(e^\sigma + e^{-\sigma} r(e^{-\sigma}; u_0))$ for $\sigma$ large, hence 
 \[
-\partial_{u_0} U_*(\sigma;u_0) \lar \eps^{1/3},
+\partial_{u_0} U_*(\sigma;u_0) \lar \eps^{1/3}.
 \]
-on the other hand
+On the other hand
 \[
 \|\eps^{-1/3}\varphi U_*^2 \|_{\mathcal{C}_r}  = \rmO(\eps^{(\alpha-1)/3}),
 \]
-so we conclude that
+so we conclude that,
 \[
 \|\eps^{-1/3}\varphi [U_*^3(\sigma;u_0)-U_*^3(\sigma;\tilde{u}_0)] \|_{\mathcal{C}_r} \lar\eps^{\alpha/3}|u_0 - \tilde{u}_0|.
 \]
 
-Therefore we conclude that
+Therefore, we conclude that
 \[
 C_2 = \text{Lip}_{u_0} \mathcal{S}_r = \rmO(\delta_+^2),
 \]
@@ -1115,52 +1115,6 @@ Again we may apply Lemma \ref{pert_inv} to conclude that there exist a constant 
 which shows the claim, provided that $|w^*| = \rmO(\eps^{1/2-\alpha/3})$.
 \end{Proof}
 
-\iffalse
-\begin{Proof}
-Similar to the proof of proposition \ref{inv_A_r}, we may find $\sigma^{**} \in (\sigma^*, \bar{\sigma}_m)$ so that $|b(\sigma)-(-2)|<\eta$ for any small $\eta$ given provided $\sigma < \sigma^{**}$. Moreover, this $\sigma^{**}$ can be chosen to be independent of $\eps$ because $\sigma^* = \rmO(\eps^{-1/4})$ and $\bar{\sigma}_m = \rmO(1)$.
-
-Then, for $\sigma \in (\sigma^*, \sigma^{**})$, $A_\ell$ is a perturbation of the invertible operator 
-\[
-A^{'}_\ell: w \mapsto \left(\frac{d}{d\sigma}w+2w, w(\sigma^*)\right),
-\]
- which can be seen as follows: for $f \in \mathcal{C}_\ell$, consider the initial value problem
- \[
- \frac{d}{d\sigma}w + 2w = f, \hspace{0.2in} w(\sigma^*) = w^*,
- \]
- which has solution 
- \[
- w(\sigma) = e^{2(\sigma^*-\sigma)}w^* + \int_{\sigma^*}^\sigma e^{2(\tau-\sigma)} f(\tau) d\tau.
- \]
- 
- Notice that
- \[
- \|e^{2(\sigma^*-\sigma)} w^*\|_{\mathcal{C}_\ell}  \le |\langle \sigma^{**}\rangle|^{-2/3} |w^* \eps^{(\alpha-2)/3}| \le |w^*\eps^{(\alpha-2)/3}|
- \]
- and
- \[
-\left\| \int_{\sigma^*}^{\sigma} e^{2(\tau-\sigma)} f(\tau)d\tau \right\|_{\mathcal{C}_\ell} \le \sup_{\sigma^* \le \sigma \le \sigma^{**}}\left|\langle \sigma \rangle^{-2/3} \int_{\sigma^*}^\sigma e^{2(\tau-\sigma)} \langle \tau \rangle^{2/3} \|f\|_{\mathcal{C}_\ell} d\tau\right| \le C\|f\|_{\mathcal{C}_\ell} \sup_{\sigma \in (\sigma^*, \sigma^{**})} (\sigma^*/\sigma)^{2/3} e^{2(\sigma^*-\sigma)},
- \] 
-this shows the invertibility of $A'_\ell$ provided $|w^*| = \rmO(\eps^{2/3})$. Which, in turn, shows the invertibility of $A_\ell$ for $\sigma \in (\sigma^*, \sigma^{**})$.
- 
- 
- Next for $\sigma \in (\sigma^{**}, \bar{\sigma}_m)$, we can directly write down the solution as
- \[
-w(\sigma) = \exp\left(\int^{\sigma}_{\sigma^{**}} b(\tau)d\tau\right) w(\sigma^{**}) + \int_{\sigma^{**}}^{\sigma} \exp\left(-\int_{\sigma}^{s}b(\tau)d\tau\right)f(s)ds,
-\]
-similar to the reasoning of proposition \ref{inv_A_r}, we have
-\[
-\left\|\exp\left(\int^{\sigma}_{\sigma^{**}} b(\tau)d\tau\right) w(\sigma^{**})\right\|_{\mathcal{C}_\ell} \le C\left(\frac{\langle \sigma^{**}\rangle}{\langle \bar{\sigma}_m\rangle}\right)^{2/3}
-\]
-and
-\[
-\left\| \int_{\sigma^{**}}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)f(s)ds\right\|_{\mathcal{C}_\ell} \le  \langle \sigma \rangle^{-2/3}\int_{\sigma^{**}}^{\sigma} \langle s \rangle^{2/3} \|f\|_{\mathcal{C}_\ell}ds \le C\|f\|_{\mathcal{C}_\ell}
-\]
-for some constant $C$ independent of $\eps$.
-
-Combing the cases for $\sigma \in (\sigma^*, \sigma^{**})$ and $\sigma \in (\sigma^{**}, \bar{\sigma}_m)$, we have proved the proposition.
-\end{Proof}
-\fi
-
 \subsection{Nonlinear estimates}
 
 Next, we will estimate the nonlinear term 
@@ -1274,9 +1228,9 @@ D_{W_\ell} f(\bar{U}_*+W_\ell,\mu;\eps)=\rmO(\mu, \bar{U}_*^2),
 \] 
 and the linearization of $\mathcal{S}_\ell$ at $W_\ell=0$, $D_{W_\ell} \mathcal{S}_\ell(0;w^*,\eps)$ satisfies
 \[
-\|D_{W_\ell} \mathcal{S}_{\ell}(0;w^*,\eps)\|_{\mathcal{C}_\ell\to\mathcal{C}_\ell} \lar \sup_{\sigma}|\eps^{-1/3}\varphi(\mu+\bar{U}_*^2)| = \rmO(\eps^{1/4}),
+\|D_{W_\ell} \mathcal{S}_{\ell}(0;w^*,\eps)\|_{\mathcal{C}_\ell\to\mathcal{C}_\ell} \lar \sup_{\sigma}|\eps^{-1/3}\varphi(\mu+\bar{U}_*^2)| = \rmO(\eps^{1/4}).
 \]
-moreover, for $\|W_{\ell}\|\le \eps^{\alpha/3}$ and $|w^*| =\rmO(\eps^{1/2-\alpha/3})$, we have \[
+Moreover, for $\|W_{\ell}\|\le \eps^{\alpha/3}$ and $|w^*| =\rmO(\eps^{1/2-\alpha/3})$, we have \[
 \|D_{W_\ell}\mathcal{S}(W_\ell;w^*,\eps)\|_{\mathcal{C}_\ell \to \mathcal{C}_\ell} \le  \|D_{W_\ell}\mathcal{S}(W_\ell;w^*,\eps)\|_{\mathcal{C}_\ell \to \mathcal{C}_\ell}+\rmO(\|W_\ell\|_{\mathcal{C}_\ell}) \le C\eps^{\alpha/3},
 \]
 for some constant $C$ independent of $w^*,\eps$.
@@ -1378,7 +1332,7 @@ A_s w = \left(\frac{d}{d\sigma}w - cw, w(\sigma_0)\right),
 defined on the dense subset $\mathcal{D}(A_s) \subset \mathcal{C}_s$.
 
 \begin{proposition}\label{inv_A_s}
-$A_s : \mathcal{D}(A_s) \subset \mathcal{C}_s \to \mathcal{C}_s \times \mathbb{R}$, and $A_s$ is bounded invertible with its inverse uniformly bounded in $\eps$.
+The operator $A_s : \mathcal{D}(A_s) \subset \mathcal{C}_s \to \mathcal{C}_s \times \mathbb{R}$, is bounded invertible with its inverse uniformly bounded in $\eps$.
 \end{proposition}
 \begin{Proof}Unlike previous cases, Lemma \ref{pert_inv} cannot be directly used for the operator $A_s$ since from the asymptotic expansion of $c$ we see that $c(\sigma)$ does not converge to $-2$ as $\sigma \to -\infty$, in fact, it diverges to $-\infty$ as $\sigma \to -\infty$. 
 However, for $\sigma \in (\sigma_0, \sigma^*)$, we have
@@ -1547,9 +1501,9 @@ D_{W_s} f(U_s+W_s,\mu;\eps)=\rmO(\mu, U_s^2),
 \] 
 and the linearization of $\mathcal{S}_s$ at $W_s=0$, $D_{W_s} \mathcal{S}_s(0;w_0,\eps)$ satisfies
 \[
-\|D_{W_s} \mathcal{S}_{s}(0;w_0,\eps)\|_{\mathcal{C}_s \to\mathcal{C}_s} \lar \sup_{\sigma}|\eps^{-1/3}\varphi(\mu+U_s^2)| = \rmO(\delta_-^{1/2}),
+\|D_{W_s} \mathcal{S}_{s}(0;w_0,\eps)\|_{\mathcal{C}_s \to\mathcal{C}_s} \lar \sup_{\sigma}|\eps^{-1/3}\varphi(\mu+U_s^2)| = \rmO(\delta_-^{1/2}).
 \]
-moreover, for $\|W_{s}\|\le \eps^{\alpha/3}$ and $|w_0| =\rmO(\eps^{1-\alpha/3})$, we have \[
+Moreover, for $\|W_{s}\|\le \eps^{\alpha/3}$ and $|w_0| =\rmO(\eps^{1-\alpha/3})$, we have \[
 \|D_{W_s}\mathcal{S}(W_s;w_0,\eps)\|_{\mathcal{C}_s  \to \mathcal{C}_s} \le  \|D_{W_s}\mathcal{S}(0;w_0,\eps)\|_{\mathcal{C}_s \to \mathcal{C}_s}+\rmO(\|W_s\|_{\mathcal{C}_s}) \le C\delta_-^{1/2},
 \]
 for some constant $C$ independent of $\eps$.
@@ -1626,7 +1580,7 @@ uniformly in $u_0$ and
 \[
 \text{Lip}_{u_0} \phi(\eps; u_0) = \rmO(\eps^{(2-\alpha)/3}).
 \]
-Hence we divide the right hand side of equation \eqref{match_ab_exp} by $\eps^{1/3}$, and apply the implicit function theorem around the point $(u_0=\bar{u}_0, \eps=0)$ to conclude that there exist a branch $u_0 = u_0(\eps)$ with $u_0(\eps)  = \bar{u}_0 + \rmO(\eps^{(1-\alpha)/3})$, the matching condition \eqref{match_ab} is satisfied. 
+Hence we divide the right hand side of equation \eqref{match_ab_exp} by $\eps^{1/3}$, and apply the implicit function theorem around the point $(u_0=\bar{u}_0, \eps=0)$ to conclude that there exist a branch $u_0 = u_0(\eps)$ with $u_0(\eps)  = \bar{u}_0 + \rmO(\eps^{(1-\alpha)/3})$, and the matching condition \eqref{match_ab} is satisfied. 
 
 Therefore, we have proved the following theorem, which implies Theorem \ref{thm:main}.
 \begin{theorem}\label{thm:glue}
@@ -1750,7 +1704,7 @@ We first show how to extend the asymptotic expansion \eqref{ric_asy} to a more g
 \subsection{A family of solutions to the Riccati equation }
 
 
-\begin{Proof}[\textbf{Proof of proposition \ref{para_ric}}] To get the dependence from $u_0$ to $\Omega_\infty$, we first add the equation $\frac{d}{ds}s=1$ to equation \eqref{ric} to get a autonomous $2-$dimensional system in the $(s,u)$ plane. Consider a small neighborhood $I$ containing $\bar{u}_0$ on the vertical $u$-axis, then $u_R(s; u_0)$ is the trajectory that starts at $u_0 \in I$. The map $P_1 : I \to \mathbb{R}$ defined by $P_1(p) = u(2; p)$ is smooth in $p$, as the blow up time for $\bar{u}_R(s;\bar{u}_0)$ is $\Omega_0 >2$. Moreover, the image $P_1(I)$ is a finite interval on the vertical line $s=2$ containing $\bar{u}_R(2;u_0)$ bounded away from $0$, since the trajectory $u_R(s;\bar{u}_0)$ crosses the horizontal axis around $s=1$ and the vector field goes upwards in the first quadrant of the $(s,u)$-plane.
+\begin{Proof}[\textbf{ of Proposition \ref{para_ric}}] To get the dependence from $u_0$ to $\Omega_\infty$, we first add the equation $\frac{d}{ds}s=1$ to equation \eqref{ric} to get a autonomous $2-$dimensional system in the $(s,u)$ plane. Consider a small neighborhood $I$ containing $\bar{u}_0$ on the vertical $u$-axis, then $u_R(s; u_0)$ is the trajectory that starts at $u_0 \in I$. The map $P_1 : I \to \mathbb{R}$ defined by $P_1(p) = u(2; p)$ is smooth in $p$, as the blow up time for $\bar{u}_R(s;\bar{u}_0)$ is $\Omega_0 >2$. Moreover, the image $P_1(I)$ is a finite interval on the vertical line $s=2$ containing $\bar{u}_R(2;u_0)$ bounded away from $0$, since the trajectory $u_R(s;\bar{u}_0)$ crosses the horizontal axis around $s=1$ and the vector field goes upwards in the first quadrant of the $(s,u)$-plane.
 
 Denote $\tilde{u}_0:= P_1(u_0)$ for brevity (technically, the interval $P_1(I)$ is a small section of the line $s=2$, with a little abuse of notation, we identify $\tilde{u}_0$ with the second coordinate of the point $P_1(u_0)$). Again in the Riccati equation \eqref{ric}, we make a change of variable by setting $z(s) = 1/u(s)$, the equation $z$ satisfies is:
 \[
@@ -1853,9 +1807,9 @@ u(\sigma) = \exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right) u(\sigma_*) +
 \]
 since $\sigma_*< \infty$ and does not depend on $L$, there exist a constant $C_1$ independent of $L$ so that 
 \[
-\max\left\{ \left|\exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right)\right|, \left| \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)\right| \right\} \le C_1,
+\max\left\{ \left|\exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right)\right|, \left| \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)\right| \right\} \le C_1.
 \]
-moreover, the value $u(\sigma_*)$ satisfies
+Moreover, the value $u(\sigma_*)$ satisfies
 \[
 u(\sigma_*) \le \sup_{\sigma \in (\sigma_*,L)} |u(\sigma)| \le C_2(u_L + |f|_\infty)
 \]
