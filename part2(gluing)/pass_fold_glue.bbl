@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{Bru_tracking}
+P.~Brunovsk\'{y}.
+\newblock Tracking invariant manifolds without differential forms.
+\newblock {\em Acta Math. Univ. Comenian. (N.S.)}, 65(1):23--32, 1996.
+
+\bibitem{chicone2006ordinary}
+C.~Chicone.
+\newblock {\em Ordinary differential equations with applications}, volume~34 of
+  {\em Texts in Applied Mathematics}.
+\newblock Springer, New York, second edition, 2006.
+
+\bibitem{chowhale}
+S.~N. Chow and J.~K. Hale.
+\newblock {\em Methods of bifurcation theory}, volume 251 of {\em Grundlehren
+  der Mathematischen Wissenschaften [Fundamental Principles of Mathematical
+  Science]}.
+\newblock Springer-Verlag, New York-Berlin, 1982.
+
+\bibitem{faye2013existence}
+G.~Faye.
+\newblock Existence and stability of traveling pulses in a neural field
+  equation with synaptic depression.
+\newblock {\em SIAM J. Appl. Dyn. Syst.}, 12(4):2032--2067, 2013.
+
+\bibitem{faye2015existence}
+G.~Faye and A.~Scheel.
+\newblock Existence of pulses in excitable media with nonlocal coupling.
+\newblock {\em Adv. Math.}, 270:400--456, 2015.
+
+\bibitem{Jones_GSPT}
+C.~K. R.~T. Jones.
+\newblock Geometric singular perturbation theory.
+\newblock 1609:44--118, 1995.
+
+\bibitem{Jones_tracking}
+C.~K. R.~T. Jones, T.~J. Kaper, and N.~Kopell.
+\newblock Tracking invariant manifolds up to exponentially small errors.
+\newblock {\em SIAM J. Math. Anal.}, 27(2):558--577, 1996.
+
+\bibitem{Jones_exchange_lemma}
+T.~J. Kaper and C.~K. R.~T. Jones.
+\newblock A primer on the exchange lemma for fast-slow systems.
+\newblock In {\em Multiple-time-scale dynamical systems ({M}inneapolis, {MN},
+  1997)}, volume 122 of {\em IMA Vol. Math. Appl.}, pages 65--87. Springer, New
+  York, 2001.
+
+\bibitem{KrupaSz}
+M.~Krupa and P.~Szmolyan.
+\newblock Extending geometric singular perturbation theory to nonhyperbolic
+  points---fold and canard points in two dimensions.
+\newblock {\em SIAM J. Math. Anal.}, 33(2):286--314, 2001.
+
+\bibitem{chris_kuehn_book}
+C.~Kuehn.
+\newblock {\em Multiple time scale dynamics}, volume 191 of {\em Applied
+  Mathematical Sciences}.
+\newblock Springer, Cham, 2015.
+
+\bibitem{runst1996sobolev}
+T.~Runst and W.~Sickel.
+\newblock {\em Sobolev spaces of fractional order, {N}emytskij operators, and
+  nonlinear partial differential equations}, volume~3 of {\em De Gruyter Series
+  in Nonlinear Analysis and Applications}.
+\newblock Walter de Gruyter \& Co., Berlin, 1996.
+
+\end{thebibliography}
