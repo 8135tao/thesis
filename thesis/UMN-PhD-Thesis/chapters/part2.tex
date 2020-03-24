@@ -1,119 +1,16 @@
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
-\usepackage{graphicx}
-\usepackage{amsfonts}
-\usepackage{dsfont}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage[titletoc]{appendix}
-
-\usepackage{enumerate}
-\usepackage{stmaryrd}
-\usepackage{fullpage}
-\usepackage{ifthen}
-\usepackage{subfigure}
-\usepackage{epic}
-\usepackage{authblk}
-\usepackage{textcomp}
-\usepackage[small]{caption}
-\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
-
-\usepackage{enumitem}
-
-\usepackage[hypertexnames=false,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
-\usepackage[numbers,comma,square,sort&compress]{natbib}
-\usepackage[letterpaper,text={7in,9in},centering]{geometry}
-
-\usepackage{bm}
-\usepackage{color}
-\usepackage{titlesec}
-\setlength{\parindent}{0.0in}
-\setlength{\parskip}{1.0ex plus0.2ex minus0.2ex}
-\renewcommand{\baselinestretch}{1.1}
-\graphicspath{{eps/}{pdf/}}
-\setcaptionmargin{0.25in}
-\def\captionfont{\itshape\small}
-\def\captionlabelfont{\upshape\small}
-
-\renewcommand{\labelenumi}{(\roman{enumi})}
-
-\newcommand{\bqq}{\begin{equation}}
-\newcommand{\eqq}{\end{equation}}
-\newcommand{\bqs}{\begin{equation*}}
-\newcommand{\eqs}{\end{equation*}}
-
-\newcommand{\Ral}{\mathcal{R}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%neutrino_physics.tex: Chapter on neutrino physics:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Part 2}
+\label{passage through fold}
 
 
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\D}{\mathbb{D}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\R}{\mathbb{R}} 
-\newcommand{\Z}{\mathbb{Z}}
-
-\newcommand{\rme}{\mathrm{e}}
-\newcommand{\rmi}{\mathrm{i}}
-\newcommand{\rmd}{\mathrm{d}}
-\newcommand{\rmo}{{\scriptstyle\mathcal{O}}}
-\newcommand{\rmO}{\mathcal{O}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\lar}{ \lesssim }
-
-
-\newcommand{\Rho}{\bm{\rho}}
-\newcommand{\bigma}{\bm{\sigma}}
-\newcommand{\diag}{\operatorname{diag}}
-\newcommand{\supp}{\operatorname{supp}}
-
-\renewcommand{\qedsymbol}{$\blacksquare$}
-
-
-\numberwithin{equation}{section}
-
-\newenvironment{Hypothesis}[1]%
-  {\begin{trivlist}\item[]{\bf Hypothesis #1 }\em}{\end{trivlist}}
-
-\renewcommand{\arraystretch}{1.25}
-
-
-
-% Define Theorem Styles ----------------------------------
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{main}[theorem]{Main Result}
-\newtheorem{rmk}[theorem]{rmk}
-
-
-\newcommand{\etal}{\textit{et al.}\ }
-
-\newcommand{\greg}[1]{%
-  {\color{blue}\textbf{Greg:} #1}%
- }
- 
-\newcommand{\arnd}[1]{%
-  {\color{red}\textbf{Arnd:} #1}%
- }
-
-
-\newenvironment{Proof}[1][.]%
- {\begin{trivlist}\item[]\textbf{Proof#1 }}%
- {\hspace*{\fill}$\rule{0.3\baselineskip}{0.35\baselineskip}$\end{trivlist}}
-
-\renewcommand\labelitemi{$\bullet$}
-
+\iffalse
 \title{Passage through a fold without a phase space}
 \author{author}
 \date{2016}
 \begin{document}
 \begin{center}
-
 {\fontsize{17}{17}\fontfamily{cmr}\fontseries{b}\selectfont{Alternatives to the blow-up method in singular perturbation problems}}\\[0.2in]
 Arnd Scheel and Tianyu Tao\\
 \textit{\footnotesize 
@@ -125,6 +22,7 @@ University of Minnesota, School of Mathematics,   206 Church St. S.E., Minneapol
 \begin{abstract}
 \noindent We revisit the classical problem of determine the asymptotic expansion of the solution near the passage of a fold point in a singularly perturbed system, where the theory of normally hyperbolic invariant manifold cannot be directly applied, the standard remedy is the blow-up method first demonstrated by Krupa and Szmolyan. In this paper we show how one can use a functional analytic approach to achieve the same goal.
 \end{abstract}
+\fi
 
 \section{Introduction}
 In this paper we study singularly perturbed ordinary differential equations (ODEs) of the form
@@ -1049,7 +947,7 @@ w_{\ell}' -2\bar{u}_* w_\ell &= w_\ell^2 + f(\bar{u}_*+w_\ell, \mu; \eps) =: R_\
 We want to solve this equation on $t\in (t^*, \eps^{-1}\delta_-)$. 
 Following previous steps, we next rescale the equation and obtain
 \begin{equation}\label{rescl_wl}
-\frac{d}{d\sigma} W_\ell - b(\sigma)W_\ell = \eps^{-1/3}\varphi \Ral_\ell(W_\ell,\mu,\eps)
+\frac{d}{d\sigma} W_\ell - b(\sigma)W_\ell = \eps^{-1/3}\varphi \Ral_\ell(W_\ell,\mu,\eps)/
 \end{equation}
 
 Where 
@@ -1338,7 +1236,7 @@ W_s(\sigma_0) &= w_0.
 
 
 \subsection{Linear equation and norms}
-The proof of Theorem \ref{thm:s} will be completed if we are able to solve \eqref{ws_bp} using a fixed point argument similar to that used in region $A$ and $B$. Fix $\alpha>0$, we first introduce the following function space
+The proof of Theorem \ref{thm:s} will be complete if we are able to solve \eqref{ws_bp} using a fixed point argument similar to that used in region $A$ and $B$. Fix $\alpha>0$, we first introduce the following function space
 \[
 \mathcal{C}_s= \mathcal{C}_s(\sigma_0, \sigma^*)  = \left\{ w(\sigma) : \sup_{\sigma_0 \le \sigma \le \sigma^*} |\eps^{\frac{\alpha}{3} -1 }\langle \eps\sigma \rangle^{\frac{2}{3}} w(\sigma)|<\infty \right\}.
 \]
@@ -1429,7 +1327,7 @@ and for $W_s \in \mathcal{C}_s$, it holds that
 |W_s(\sigma)| \lar \eps^{1-\alpha/3}\langle \eps \sigma\rangle^{-2/3}.
 \]
 
-Hence we have the following estimates
+Hence we have the following estimates:
 \begin{equation}\label{nl_est:Rs_1}
 \left\|\frac{d}{d\sigma}U_s(\sigma) \right\|_{\mathcal{C}_s}  \lar \sup_{\sigma \in (\sigma_0, \sigma^{*})}\eps^{\alpha/3-1}\langle \sigma\rangle^{2/3} \eps|\eps \sigma|^{-2/3} = \rmO(\eps^{\alpha/3}),
 \end{equation}

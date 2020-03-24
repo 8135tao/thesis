@@ -1,0 +1,140 @@
+%   environments
+\newtheorem{Lemma}{Lemma}[section]
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Proposition}[Lemma]{Proposition}
+\newtheorem{Corollary}[Lemma]{Corollary}
+\newtheorem{Remark}[Lemma]{Remark}
+\newtheorem{Definition}[Lemma]{Definition}
+
+% \newtheorem{Hypothesis}[Lemma]{Hypothesis}
+\newenvironment{Hypothesis}[1]%
+  {\begin{trivlist}\item[]{\bf Hypothesis #1 }\em}{\end{trivlist}}
+
+\newenvironment{Proof}[1][\unskip]%
+ {\begin{trivlist} \item[]{\bf Proof #1. }}%
+ {\hspace*{\fill}$\rule{.4\baselineskip}{.4\baselineskip}$\end{trivlist}}
+
+\newenvironment{Acknowledgment}%
+ {\begin{trivlist}\item[]\textbf{Acknowledgments.}}{\end{trivlist}}
+
+%   counters
+\makeatletter\@addtoreset{figure}{section}\makeatother
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+\renewcommand{\theTheorem}{\arabic{Theorem}}
+\renewcommand{\theLemma}{\arabic{section}.\arabic{Lemma}}
+
+\makeatletter \@addtoreset{equation}{section} \makeatother
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+% 
+%   private definitions
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Ns}{\mathrm{ker\,}}
+
+\def\Re{\mathop{\mathrm{Re}}}
+\def\Im{\mathop{\mathrm{Im}}}
+
+\newcommand{\rmO}{\mathrm{O}}
+\newcommand{\rmo}{\mathrm{o}}
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmi}{\mathrm{i}}
+\renewcommand{\ker}{\mathrm{Ker}\,}
+\newcommand{\id}{\mathrm{\,id}\,}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Rg}{\mathrm{Rg}}
+
+\newcommand{\eps}{\varepsilon}
+% 
+%   private definitions --- Tao
+
+\newcommand{\Nl}{\mathcal{N}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\That}{\widehat{\mathcal{T}}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\e}{\mathpzc{e}}
+% \newcommand{\e}{{e}}
+
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\Rm}{\mathcal{R}}
+
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\spa}{\operatorname{span}}
+
+
+
+%%%%%%%%%%%%%%%
+%  \llangle & \rrangle
+%%%%%%%%%%%%%%%
+\makeatletter
+\newsavebox{\@brx}
+\newcommand{\llangle}[1][]{\savebox{\@brx}{\(\m@th{#1\langle}\)}%
+  \mathopen{\copy\@brx\kern-0.5\wd\@brx\usebox{\@brx}}}
+\newcommand{\rrangle}[1][]{\savebox{\@brx}{\(\m@th{#1\rangle}\)}%
+  \mathclose{\copy\@brx\kern-0.5\wd\@brx\usebox{\@brx}}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\definecolor{Green}{rgb}{0.,0.4,0.}
+%\newcommand{\Green}[1]{\textcolor{Green}{#1}}
+
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+
+\newcommand{\per}{\mathrm{per}}
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\theenumi}{(\roman{enumi})}
+
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+
+% bold-face in mathmode
+
+\newfam\bifam
+\font\tenbi=cmmib10 scaled \magstep1 \font\sevenbi=cmmib10 at 11pt
+\font\fivebi=cmmib10 at 6pt \textfont\bifam = \tenbi
+\scriptfont\bifam = \sevenbi \scriptscriptfont\bifam= \fivebi
+\def\mbf#1{{\fam\bifam\relax#1}}
+
+
+\ifx\pdfoutput\undefined
+   \pdffalse
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi
+\ifpdf
+   \usepackage{graphicx}
+   \usepackage{epstopdf}
+   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+   \pdfcompresslevel=9
+\else
+   \usepackage{graphicx}
+\fi

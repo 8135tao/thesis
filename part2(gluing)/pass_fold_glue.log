@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  19 MAR 2020 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  24 MAR 2020 09:06
 entering extended mode
 **./pass_fold_glue.tex
 (pass_fold_glue.tex
@@ -640,25 +640,26 @@ Package epstopdf Info: Source file: <pictures/time_scale.eps>
 (epstopdf)                    size: 13060 bytes
 (epstopdf)             Command: <epstopdf --outfile=pictures/time_scale-eps-con
 verted-to.pdf pictures/time_scale.eps>
-(epstopdf)             \includegraphics on input line 515.
+(epstopdf)             \includegraphics on input line 521.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./pictures/time_scale-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pictures/time_scale-eps-converted-to.pdf, id=275, 789.95125pt x 403.5075pt>
+<pictures/time_scale-eps-converted-to.pdf, id=271, 789.95125pt x 403.5075pt>
 File: pictures/time_scale-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/time_scale-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/time_scale-eps-converted-to.pdf  used on inpu
-t line 515.
+t line 521.
 (pdftex.def)             Requested size: 789.94931pt x 403.50652pt.
-[9 <./pictures/time_scale-eps-converted-to.pdf>]
+[9]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 558.
+(hyperref)                removing `subscript' on input line 564.
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
-[25] [26] [27] [28] [29] [30] [31]
+[10 <./pictures/time_scale-eps-converted-to.pdf>] [11] [12] [13] [14] [15]
+[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
+[31]
 Package epstopdf Info: Source file: <pictures/contraction_Fenichel.eps>
 (epstopdf)                    date: 2020-02-28 19:03:45
 (epstopdf)                    size: 152104 bytes
@@ -668,44 +669,44 @@ d-to.pdf>
 (epstopdf)                    size: 195501 bytes
 (epstopdf)             Command: <epstopdf --outfile=pictures/contraction_Fenich
 el-eps-converted-to.pdf pictures/contraction_Fenichel.eps>
-(epstopdf)             \includegraphics on input line 1711.
+(epstopdf)             \includegraphics on input line 1715.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./pictures/contraction_Fenichel-eps-converted-to
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
-<pictures/contraction_Fenichel-eps-converted-to.pdf, id=614, 845.1575pt x 598.2
+<pictures/contraction_Fenichel-eps-converted-to.pdf, id=619, 845.1575pt x 598.2
 35pt>
 File: pictures/contraction_Fenichel-eps-converted-to.pdf Graphic file (type pdf
 )
 <use pictures/contraction_Fenichel-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/contraction_Fenichel-eps-converted-to.pdf  us
-ed on input line 1711.
+ed on input line 1715.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 
-Overfull \hbox (1.20842pt too wide) in paragraph at lines 1711--1713
+Overfull \hbox (1.20842pt too wide) in paragraph at lines 1715--1717
  [][] 
  []
 
 [32] [33 <./pictures/contraction_Fenichel-eps-converted-to.pdf>] [34] [35]
-(pass_fold_glue.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1857.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1857.
+(pass_fold_glue.bbl [36])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1855.
+ [37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1855.
  (pass_fold_glue.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1857.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1857.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1855.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1855.
 
 Package rerunfilecheck Info: File `pass_fold_glue.out' has not changed.
-(rerunfilecheck)             Checksum: 62C90ACB97DD0757BB21C47942886C94;2095.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1857.
+(rerunfilecheck)             Checksum: A7E438E950BA32817C9391280F0E44CB;2096.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1855.
  ) 
 Here is how much of TeX's memory you used:
- 10432 strings out of 480900
- 158751 string characters out of 2898321
- 442178 words of memory out of 3000000
- 25881 multiletter control sequences out of 15000+200000
+ 10445 strings out of 480900
+ 158914 string characters out of 2898321
+ 443429 words of memory out of 3000000
+ 25887 multiletter control sequences out of 15000+200000
  550758 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,42p,1083b,514s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -732,9 +733,9 @@ onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/8135t/AppData/Local/Programs
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/User
 s/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on pass_fold_glue.pdf (36 pages, 664631 bytes).
+Output written on pass_fold_glue.pdf (37 pages, 667099 bytes).
 PDF statistics:
- 781 PDF objects out of 1000 (max. 8388607)
- 210 named destinations out of 1000 (max. 500000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
  248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
