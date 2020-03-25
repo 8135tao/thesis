@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %neutrino_physics.tex: Chapter on neutrino physics:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Part 2}
-\label{passage through fold}
+\chapter{Passage through fold}
+\label{thesis_p2}
 
 
 \iffalse
@@ -92,13 +92,13 @@ for $(\mu, u,\eps) \in \mathcal{U}$.
 \begin{figure}[ht]
  \centering % centering figure
  \scalebox{0.3} % rescale the figure by a factor of 0.3
- {\includegraphics{pictures/passage_fold.eps}} % importing figure
+ {\includegraphics{figures/passage_fold.eps}} % importing figure
  \caption{critical manifold and slow manifolds, section near the fold}\label{fig:passage}
 \end{figure}
 
  Away from the fold point $(0,0,0)$, there exist the attracting manifold $M_a$ with a section $S_a$ sketched in Figure \ref{fig:passage}. By standard Fenichel's theory, $S_a$ perturbs to $S_{a,\eps}$ until it reaches the fold point, thus a natural question is to track how a trajectory starting on the slow manifold $S_{a,\eps}$ passes through the fold point.
 
-Krupa and Szmolyan starts by setting two sections $\Delta_{in} = \{(-\delta, u) \mid u\in J,\text{ $J$ is some small interval }\}$ and $\Delta_{out} = \{( \mu ,\sqrt{\delta})\mid \mu \in \mathbb{R})\}$ with $\delta>0$ small but fixed, which are also shown in figure \ref{fig:passage}. To track the passage through the fold amounts to study the transition map 
+For a small interval $J$ containing $-\sqrt{\delta}$, Krupa and Szmolyan starts by setting two sections $\Delta_{in} = \{(-\delta, u) : u \in J \}$ and $\Delta_{out} = \{( \mu ,\sqrt{\delta}): \mu \in \mathbb{R})\}$ with $\delta>0$ small but fixed, which are also shown in figure \ref{fig:passage}. To track the passage through the fold amounts to study the transition map 
 \[
 \pi: \Delta_{in} \to \Delta_{out},
 \]
@@ -108,14 +108,14 @@ Krupa and Szmolyan then proceed by defining the blow up transformation
 u =\bar{r} \bar{u},  \quad \mu = \bar{r}^2 \bar{\mu}, \quad  \eps = \bar{r}^3 \bar{\eps},
 \]
 which ``blows up'' the vector field of the extended $(\mu, u, \eps)$ system near $(0,0,0)$ into a vector field on the ball $B = S^2 \times [0,\eps_0^{1/3}] \ni (\bar{u}, \bar{\mu}, \bar{\eps}, \bar{r})$ for some $\eps_0>0$ small, and further directional blow-ups to obtain charts $K_1,K_2,K_3$ which was used to describe the flows in regions near different parts of the manifold $B$. After a careful and thorough analysis, they were able to prove the following results:
-\begin{theorem}\label{ks_main}(Theorem 2.1 in \cite{KrupaSz})
+\begin{Theorem}\label{ks_main}(Theorem 2.1 in \cite{KrupaSz})
 
 For $\eps$ sufficiently small, the following statements are true:
 \begin{enumerate}
 \item The manifold $S_{a,\eps} $ passes through  $\Delta_{out}$ at a point $(h(\eps), \sqrt{\delta})$ where $h(\eps) = \rmO(\eps^{2/3})$.
 \item The transition map $\pi$ is a contraction with rate $\rmO(e^{-c/\eps} )$, where $c$ is a positive constant independent of $\eps$.
 \end{enumerate}
-\end{theorem}
+\end{Theorem}
 
 
 In this paper, we focus on the same problem \eqref{ori_eqn} with an aim to recreate the result of Theorem \ref{ks_main} via a different, functional-analytical approach. Instead of proceeding with the geometrically-flavored blow-up approach, we directly prove a trajectory exists with the properties claimed in Theorem \ref{ks_main} by dividing the time of passage into appropriate parts and setting up a corresponding ansatz in each region, closing the arguments with carefully reformulating the existence question as a fixed-point argument.
@@ -199,7 +199,7 @@ More generally, we consider family of solutions  $u_R(s; u_0)$ of the Riccati eq
 \end{equation} 
 In fact, using simple phase plane analysis, we can extend the asymptotic results about the special Riccati solution $\bar{u}_R$ to the family of solutions $u_R(s; u_0)$ as follows.
 
-\begin{proposition}\label{para_ric}
+\begin{Proposition}\label{para_ric}
 There exist $\eta>0$ small, so that for all initial condition $u_0$ with $|u_0- \bar{u}_0|<\eta$, there exist a number $\Omega_\infty=\Omega_\infty(u_0)$ which depends on $u_0$ smoothly, and a solution $u_R(s;u_0)$ of \eqref{ric} on $[0, \Omega_\infty(u_0))$ with the following asymptotic expansion as $s\to \Omega_\infty(u_0)$:
 \begin{equation}\label{ric_exp}
 u_R(s;u_0) = \frac{1}{\Omega_\infty-s} +  (\Omega_\infty-s) r(\Omega_\infty-s;u_0),
@@ -209,8 +209,8 @@ where the function $r$ is smooth in both variables and satisfies
 r( \Omega_\infty-s; u_0) = -\frac{\Omega_\infty}{3} + \rmO(\Omega_\infty-s),
 \end{equation}
 as $s \to \Omega_\infty$.
-\end{proposition}
-we postpone the proof of this proposition to the appendix.
+\end{Proposition}
+We postpone the proof of this proposition to the appendix.
 \subsection{Critical manifold}\label{c_mfld}
 Another piece of the ansatz comes from part of  the critical manifold, we expect this because away from the fold, the critical manifold has an attracting branch $S_a$ which implies trajectory has to stay close to it. 
 
@@ -255,7 +255,7 @@ u_s(t) = -\sqrt{\delta-\eps t} + \rmO(|\delta-\eps t|).
 
 We now state our main result. Recall $\mathcal{U}$ is a neighborhood small enough so that \eqref{fold_nonlinearity} holds for $(\mu, u , \eps) \in \mathcal{U}$.
 
-\begin{theorem}\label{thm:main}Let $\Omega_0$ be the constant defined in \eqref{ric_asy}.
+\begin{Theorem}\label{thm:main}Let $\Omega_0$ be the constant defined in \eqref{ric_asy}.
 Fix $\delta_-, \delta_+>0$ and $\alpha$ with $0<\alpha <3/4$. There exist $\eps_0>0,$ a constant $C=C(\delta,\alpha),$ such that for all $0<\eps<\eps_0$ and $u_i$ with $|u_i -u_-(-\delta) | \le C\eps^{1-\alpha/3}$, a solution of the rescaled system 
 \begin{equation}\label{main_eqn}
 \begin{split}
@@ -289,20 +289,20 @@ In particular, since $\mu(t) = \eps t -\delta_-$, we have the following expansio
 \mu(T) = \eps^{2/3}\Omega_0  + \eps\mathcal{H}(\eps; u_i) = \eps^{2/3}\Omega_0 + \rmO(\eps^{1-\alpha/3}).
 \end{equation}
 
-\end{theorem}
+\end{Theorem}
 
 To fully recover Theorem \ref{ks_main}, we have the following corollary.
-\begin{corollary}\label{cor:main}
+\begin{Corollary}\label{cor:main}
 For $\alpha,\delta_-,\delta_+>0$, there is a compact interval $K \subset (-\infty, u_+(-\delta_-))$, independent of $\eps$ so that for all $u_i \in K$ with $(u_i,\mu,\eps) \in \mathcal{U}$, the same conclusion of Theorem \ref{thm:main} holds. In fact, there exist a constant $c$ independent of $\eps$, such that the Lipschitz constant of $\mathcal{H}(\eps;u_i)$ in the expansion \eqref{T_exp_+} satisfies
 \begin{equation}\label{T_remainder_exp_+}
 \text{Lip}_{u_i} \eps\mathcal{H}(\eps;u_i) = \rmO(e^{-c/\eps}),
 \end{equation}
 for all $u_i \in K$.
-\end{corollary}
+\end{Corollary}
 
 
 
-\textbf{Remark:} Notice $\alpha>0$ could be chosen arbitrary small in the expansion \eqref{exit_loc_exp}. In fact, it is well-known from the matched-asymptotics community that the next order term after $\eps^{2/3}\Omega_0$ is of order $\eps \log(\eps)$.  This is also confirmed in \citep{KrupaSz} using the blow-up methods. 
+\textbf{Remark:} Notice $\alpha>0$ could be chosen arbitrary small in the expansion \eqref{exit_loc_exp}. In fact, it is well-known from the matched-asymptotics community that the next order term after $\eps^{2/3}\Omega_0$ is of order $\eps \log(\eps)$.  This is also confirmed in \cite{KrupaSz} using the blow-up methods. 
 
 
  The proof of Theorem \ref{thm:main} and \ref{cor:main} will take up the rest of the paper,  we first prepare ourselves with the setup of the problem in the following sections.
@@ -340,7 +340,7 @@ so similarly $\bar{u}_*$ is a rescaled version of the special solution to the Ri
 
 The next piece of the ansatz will be used to connect the piece $u_B$, which roughly follows the special Riccati solution $\bar{u}_R$, to the attracting branch $S_a$ of the critical manifold $S_0$, a natural ``gluing point'' is where the error between $\bar{u}_*(t)$ and $u_s(t)$ defined in \eqref{singular} and \eqref{uldef}, is small. Calculation shows that this is at a point $t=t^*$ where we roughly have
 \begin{equation}
-(\delta_- - \eps t^*) \approx -\eps^{1/2},
+(\delta_- - \eps t^*)<0, \quad |\delta_- - \eps t^*| = \rmO(\eps^{1/2}),
 \end{equation} 
 
 hence we choose $t^*$ as a natural transition point from region $B$ to the last region, region $C$, where it covers the rest of the passage time until at $t=0$. The corresponding solution will take the form
@@ -400,8 +400,8 @@ Therefore we can write
 
 After defining the time transformation, the original exit time $t=T$ will be transformed into $\sigma=\sigma_T$ under this change of variable, and similarly the boundary between region $A$ and region $B$ is  transformed from $t=\eps^{-1}\delta_-$ to $\sigma = \sigma_m$ and the boundary between region $B$ and region $C$ is  transformed from $t=t^*$ to $\sigma = \sigma^*$, and $t=0$ into $\sigma = \sigma_0$. We will see later that the $\sigma_0, \sigma^*, \sigma_m, \sigma_T$ satisfies:
 \[
-\sigma _0 \approx -\delta_-^{3/2}\eps^{-1}, \quad \sigma ^* \approx -\eps^{-1/4}, \quad \sigma_m = \rmO_\eps(1), \quad
-\sigma_T \approx -\log(\eps^{1/3}\delta_+^{-1}) 
+|\sigma _0| =\rmO( \delta_-^{3/2}\eps^{-1}), \quad |\sigma ^*| =\rmO( \eps^{-1/4}), \quad \sigma_m = \rmO(1), \quad
+\sigma_T = \rmO( -\log(\eps^{1/3}\delta_+^{-1}) )
 \]
 In summary, the regions in time $\sigma$ are as follows:
 \begin{align}\label{region_division_sig}
@@ -415,8 +415,8 @@ and the following picture summarizes the relationship between the two time scale
 
 \begin{figure}[ht]
  \centering % centering figure
- \scalebox{0.6} % rescale the figure by a factor of 0.3
- {\includegraphics[angle = 0, origin = c]{pictures/time_scale.eps}} % importing figure
+ \scalebox{0.5} % rescale the figure by a factor of 0.3 
+ {\includegraphics[angle = 0, origin = c]{figures/time_scale.eps}} % importing figure
  % labeling to refer it inside the text
  \caption{Time scales used to divide the regions.}
 \end{figure}\label{fig:time_scale} 
@@ -428,7 +428,7 @@ Region A corresponds to the time-$t$ interval $\{ t : t > \eps^{-1}\delta_-\}$. 
 
 \subsection{Solution in region A}
 
-\begin{theorem}\label{thm:r}
+\begin{Theorem}\label{thm:r}
 Fix $\alpha>0, \delta_-,\delta_+>0, \eta>0$ small enough, there exists $\eps_A>0$ and a constant $C=C(\alpha,\delta_-,\delta_+,\eta)$, such that for all $0<\eps <\eps_A$, and all $|u_0 - \bar{u}_0|<\eta$, there exist a time $T=T(\eps;u_0)$, such that a solution of the form
 \begin{equation}
 u_A(t;u_0) = u_*(t; u_0) + w_r(t; u_0),
@@ -440,7 +440,8 @@ u_*(t; u_0) = \eps^{1/3}u_R(\eps^{1/3}(t-\eps^{-1}\delta_-); u_0),
 \end{equation} and $u_R(\cdot; u_0)$ is the family of solution to Riccati equation that were shown to exist in Proposition \ref{para_ric}. 
 
 Moreover, we have
-\begin{enumerate}[label=\textnormal{(\arabic*)}]
+\begin{enumerate}
+%[label=\textnormal{(\arabic*)}]
 \item \label{thm:r_1}$T=T(\eps;u_0) = \eps^{-1}\delta_-+\eps^{-1/3}\Omega_\infty(u_0)-\delta_+^{-1}+T_r$ with $T_r = \rmO( \eps^{2/3}\delta_+^{-3} )$ where the constant $\Omega_\infty(u_0)$ is defined in Proposition \ref{para_ric};
 \item \label{thm:r_2} $w_r(T; u_0) = 0$ and $u_*(T,u_0)=\delta_+$;
 
@@ -456,7 +457,7 @@ $\Psi: (\bar{u}_0-\eta, \bar{u}_0+\eta) \to \mathbb{R}$ defined by $\Psi(u_0)=  
 |\text{Lip}_{u_0}\Psi |\le C\eps^{(2-\alpha)/3}. 
 \]
 \end{enumerate}
-\end{theorem}
+\end{Theorem}
 
 We will prove this theorem in the following sections.
 \subsection{The exit time \texorpdfstring{$T(u_0)$}{T(u_0)}}\label{exit_time}
@@ -575,7 +576,7 @@ A_r w = \left( \frac{d}{d\sigma}w-a(\sigma; u_0) w,  w(\sigma_T)\right),
 \]
 which is defined on a dense subset $\mathcal{D}(A_r) \subset \mathcal{C}_r$.
 
-\begin{proposition}\label{inv_A_r}Let $\eta>0$ be in Proposition \ref{para_ric} so that the family of solutions $u_R(\cdot;u_0)$ exists for $u_0 \in I_r$ where $I_r = \{ u_0: |u_0-\bar{u}_0|<\eta\}.$ There then exist $\eps_1>0$ such that the operator $A_r(u_0,\eps) : \mathcal{D}\subset \mathcal{C}_r \to \mathcal{C}_r\times \mathbb{R}$ is invertible, with its inverse 
+\begin{Proposition}\label{inv_A_r}Let $\eta>0$ be in Proposition \ref{para_ric} so that the family of solutions $u_R(\cdot;u_0)$ exists for $u_0 \in I_r$ where $I_r = \{ u_0: |u_0-\bar{u}_0|<\eta\}.$ There then exist $\eps_1>0$ such that the operator $A_r(u_0,\eps) : \mathcal{D}\subset \mathcal{C}_r \to \mathcal{C}_r\times \mathbb{R}$ is invertible, with its inverse 
 \[
 A_r^{-1}(u_0,\eps) : \mathcal{C}_r \times \mathbb{R} \to \mathcal{C}_r
 \]
@@ -586,7 +587,7 @@ Moreover, we have the following estimate on the Lipschitz constant for the map $
 \|A_r^{-1}(\tilde{u}_0,\eps) - A_r^{-1}(u_0,\eps)\|_{\mathcal{C}_r\times\mathbb{R}\to \mathcal{C}_r} \le C|\tilde{u}_0-u_0|
 \end{equation}
 for some constant $C$ independent of $\eps$.
-\end{proposition}
+\end{Proposition}
 \begin{Proof}
 Consider the conjugate operator of $A_r$, given by
 \begin{align*}
@@ -661,7 +662,7 @@ In this section we estimate the nonlinear term
 \mathcal{R}_r(W_r;\eps,u_0)(\sigma) = W_r^2(\sigma) + f(U_*(\sigma;\eps,u_0)+W_r(\sigma), \mu ; \eps),
 \]
 in the $\mathcal{C}_r$ norm to prove the following.
-\begin{proposition}\label{nl_est_r}
+\begin{Proposition}\label{nl_est_r}
 If $W_r \in \mathcal{C}_{r}$, then $\eps^{-1/3}\varphi \mathcal{R}_r(W_r) \in \mathcal{C}_{r}$, and
 \begin{equation}\label{nl_est:Rr}
 \|\eps^{-1/3}\varphi \mathcal{R}_r(W_r) \|_{\mathcal{C}_r} = \rmO(\delta^{\alpha}).
@@ -672,7 +673,7 @@ Moreover, we have the following Lipschitz constant estimate for the map $W_r \ma
 \|\eps^{-1/3}\varphi(\mathcal{R}_r(\widetilde{W}_r) - \mathcal{R}_r(W_r)) \|_{\mathcal{C}_r}\le C\delta^{1-\alpha} \|\widetilde{W}_r - W_r \|_{\mathcal{C}_r},
 \end{equation}
 for some constant $C$ independent of $\eps, \delta$.
-\end{proposition}
+\end{Proposition}
 
 \begin{Proof} Proposition \ref{ric_exp} shows that
 \begin{equation} \label{u*_asy}
@@ -749,9 +750,11 @@ We now show the Lipschitz constant estimate \eqref{Lip_est:Rr} for the map
 W_r \mapsto \eps^{-1/3}\varphi \mathcal{R}_r(W_r).
 \] 
 First recall \eqref{nonlinear_asy:fr}, which implies that 
-\[
-\|\eps^{-1/3}\varphi(f(U_*+W_r,\mu;\eps)-f(U_*+\widetilde{W}_r,\mu;\eps))\|_{\mathcal{C}_r} \le C\sup_{\sigma}|\eps^{-1/3}\varphi\mu|\|W_r- \widetilde{W}_r\|_{\mathcal{C}_r} \le C\eps^{1/3}\|W_r- \widetilde{W}_r \|_{\mathcal{C}_r}
-\]
+\begin{align*}
+\|\eps^{-1/3}\varphi(f(U_*+W_r,\mu;\eps)-f(U_*+\widetilde{W}_r,\mu;\eps))\|_{\mathcal{C}_r} 
+&\le C\sup_{\sigma}|\eps^{-1/3}\varphi\mu|\|W_r- \widetilde{W}_r\|_{\mathcal{C}_r}\\ 
+&\le C\eps^{1/3}\|W_r- \widetilde{W}_r \|_{\mathcal{C}_r}
+\end{align*}
 for some constant $C$ independent of $\eps$ and $\delta$.
 
 On the other hand, we have
@@ -769,7 +772,7 @@ for some constant $C$ independent of $\eps$ and $\delta$, which is the estimate 
 
 \subsection{Fixed point argument and the proof of Theorem \ref{thm:r}}
 In this section we prove Theorem \ref{thm:r} by setting up an appropriate fixed point argument.
-\begin{Proof}[ of Theorem \ref{thm:r}.]
+\begin{Proof}[of Theorem \ref{thm:r}]
 Assertions \ref{thm:r_1} and \ref{thm:r_2} in the theorem have been demonstrated in Sections \ref{exit_time} and \ref{equation_wr}. Assertion \ref{thm:r_3} is a direct consequence of the fact that $W_r \in \mathcal{C}_r$. To prove a solution $W_r$ exists, observe that \eqref{rescl_wr}
 \[ 
 \left(\frac{d}{d\sigma} - a(\sigma; u_0)\right) W_r =\eps^{-1/3}\varphi \mathcal{R}_r(W_r; \eps,u_0),
@@ -789,9 +792,12 @@ We now use Proposition \ref{inv_A_r} to precondition the above equation with the
 Note that by Proposition \ref{inv_A_r} and Proposition \ref{nl_est_r}, $\mathcal{S}_r$ is well defined and maps $\mathcal{C}_r$ into $\mathcal{C}_r$ with $\eps$ and $u_0$ as parameters. Moreover, we have 
 \begin{itemize}
 \item At $W_r=0$ it holds that
-\[
-\|\mathcal{S}_r(0;\eps,u_0) \|_{\mathcal{C}_r}= \|A_r^{-1}(\eps^{-1/3}\varphi \mathcal{R}_r(0), 0)\|_{\mathcal{C}_r} \le \|A_r^{-1}\|\|(\eps^{-1/3}\varphi \mathcal{R}_r(0), 0)\|_{\mathcal{C}_r} \lar \| \eps^{-1/3}\varphi U_*^3\|_{\mathcal{C}_r} \le C_1\delta_+^\alpha,
-\]
+\begin{align*}
+\|\mathcal{S}_r(0;\eps,u_0) \|_{\mathcal{C}_r} 
+&= \|A_r^{-1}(\eps^{-1/3}\varphi \mathcal{R}_r(0), 0)\|_{\mathcal{C}_r}\\ 
+&\le \|A_r^{-1}\|\|(\eps^{-1/3}\varphi \mathcal{R}_r(0), 0)\|_{\mathcal{C}_r}\\ 
+&\lar \| \eps^{-1/3}\varphi U_*^3\|_{\mathcal{C}_r} \le C_1\delta_+^\alpha,
+\end{align*}
 for some constant $C_1$ independent of $\eps$ and $u_0$.
 
 \item The map $\mathcal{S}_r:\mathcal{C}_r \to \mathcal{C}_r$ is well defined and smooth in $W_r$.
@@ -895,9 +901,11 @@ and hence
 \]
 
 On the other hand, the evaluation map $\Psi_1$ is a linear map which satisfies
-\[
-|\Psi_1(W)-\Psi_1(\widetilde{W})| = |W(\sigma_m) -\widetilde{W}(\sigma_m) | \le\|W - \widetilde{W}\|_{\mathcal{C}_r}\eps^{(2-\alpha)/3} e^{(2-\alpha)\sigma_m} \lar \eps^{(2-\alpha)/3}\|W-\widetilde{W}\|,
-\]
+\begin{align*}
+|\Psi_1(W)-\Psi_1(\widetilde{W})| &= |W(\sigma_m) -\widetilde{W}(\sigma_m) |\\ 
+&\le\eps^{(2-\alpha)/3} e^{(2-\alpha)\sigma_m}\|W - \widetilde{W}\|_{\mathcal{C}_r}\\ 
+&\lar \eps^{(2-\alpha)/3}\|W-\widetilde{W}\|_{\mathcal{C}_r},
+\end{align*}
 for $W,\widetilde{W}$ in $\mathcal{C}_r$, therefore
 \[
 \text{Lip}_{W_r} \Psi_1 = \rmO(\eps^{(2-\alpha)/3}).
@@ -915,7 +923,7 @@ Region B corresponds to the time-$t$ interval $ \{t: t^*< t< \eps^{-1}\delta_-\}
 
 \subsection{Solution in region B}
 
-\begin{theorem}\label{thm:l}
+\begin{Theorem}\label{thm:l}
 Fix $\delta_-, \delta_+>0, \alpha>0$ small enough, there exists $\eps_B>0$ and a constant $C=C(\delta,_-,\delta_+,\alpha)$ such that for all $0<\eps <\eps_B$, and $w^*$ with $|w^*| \le  C\eps^{1/2-\alpha/3}$, a solution $u_B$ of the form 
 \begin{equation}
 u_B(t) = \bar{u}_*(t) + w_\ell(t),
@@ -932,7 +940,7 @@ and $\bar{u}_R(\cdot)$ is the special solution of the Riccati equation with asym
 |w_\ell(t)| \le C\eps^{(2-\alpha)/3} | \eps^{1/3}(t-\eps^{-1}\delta_-)+1|,
 \end{equation}
 for $t \in (t^*, \eps^{-1}\delta_-)$.
-\end{theorem}
+\end{Theorem}
 
 We will prove this theorem in the rest of this section.
 \subsection{Equation of \texorpdfstring{$W_{\ell}$}{Well} and rescaling}
@@ -998,11 +1006,11 @@ A_\ell w = \left(\frac{d}{d\sigma}w - b(\sigma)w, w(\sigma^*)\right),
 \] 
 which is defined on a dense subset $\mathcal{D}(A_\ell) \subset \mathcal{C}_\ell$.
 
-\begin{proposition} \label{inv_A_l} Fix $\eps_2 >0$, there is a constant $C$ such that the operator $A_\ell : \mathcal{D}(A_\ell)\subset \mathcal{C}_\ell \to \mathcal{C}_\ell\times \mathbb{R}$ is invertible. Moreover, the inverse $A_r^{-1}(\eps) : \mathcal{C}_\ell \times I_\ell \to \mathcal{C}_\ell$ is bounded uniformly for $\eps$ with $0<\eps <\eps_2$, where $I_\ell$ is the interval
+\begin{Proposition} \label{inv_A_l} Fix $\eps_2 >0$, there is a constant $C$ such that the operator $A_\ell : \mathcal{D}(A_\ell)\subset \mathcal{C}_\ell \to \mathcal{C}_\ell\times \mathbb{R}$ is invertible. Moreover, the inverse $A_r^{-1}(\eps) : \mathcal{C}_\ell \times I_\ell \to \mathcal{C}_\ell$ is bounded uniformly for $\eps$ with $0<\eps <\eps_2$, where $I_\ell$ is the interval
 \[
 I_\ell :=\{x : |x|\le C\eps^{1/2-\alpha/3}\}.
 \]
-\end{proposition}
+\end{Proposition}
 
 \begin{Proof}
 Similar to the proof of Proposition \ref{inv_A_r}, if we set $v(\sigma) =\eps^{(\alpha-2)/3} \langle\sigma \rangle^{-2/3}w(\sigma)$, then we consider the conjugate linear operator
@@ -1040,12 +1048,12 @@ Next, we will estimate the nonlinear term
 \Ral_{\ell} (W_\ell)=W_\ell^2 + f(\bar{U}_*+W_\ell, \mu;\eps),
 \]
  in the $\mathcal{C}_\ell$ norm. 
-\begin{proposition}\label{nl_est_l}
+\begin{Proposition}\label{nl_est_l}
 If $W_\ell \in \mathcal{C}_{\ell}$, then $ \eps^{-1/3}\varphi \Ral_\ell(W_\ell(\sigma))  \in \mathcal{C}_\ell$ and 
 \begin{equation}\label{nl_est:Rl}
 \| \eps^{-1/3}\varphi \Ral_\ell(W_\ell) \|_{\mathcal{C}_\ell} = \rmO(\eps^{\alpha/3}).
 \end{equation}
-\end{proposition}
+\end{Proposition}
 
 \begin{Proof}
 From the asymptotic expansion \eqref{ric_asy}, we have that
@@ -1110,7 +1118,7 @@ Combining estimates \eqref{nl_est:Rl_1} and \eqref{nl_est:Rl_2} we conclude that
 
 \subsection{Fixed point argument and the proof of Theorem \ref{thm:l}}
 We are now ready to prove Theorem \ref{thm:l}.
-\begin{Proof}[ of Theorem \ref{thm:l}.]The proof consists of rewriting \eqref{wr_bp} as a fixed point equation. Using the linear operator $A_\ell$, we rewrite \eqref{wl_bp}
+\begin{Proof}[of Theorem \ref{thm:l}]The proof consists of rewriting \eqref{wr_bp} as a fixed point equation. Using the linear operator $A_\ell$, we rewrite \eqref{wl_bp}
  \begin{align*}
 \begin{split}
 \frac{d}{d\sigma} W_\ell - b(\sigma)W_\ell &= \eps^{-1/3}\varphi \Ral_\ell(W_\ell),\\
@@ -1132,9 +1140,11 @@ By Proposition \ref{inv_A_l} we precondition the above equation with the operato
 From Propositions \ref{inv_A_l} and \ref{nl_est_l}, we conclude 
 \begin{itemize}
 \item At $W_\ell =0 $ it holds that 
-\[
-\|\mathcal{S}_\ell(0; w^*,\eps) \|_{\mathcal{C}_\ell}= \|A_\ell^{-1}\left(\eps^{-1/3}\varphi \mathcal{R}_\ell(W_\ell),w^*)\right)\|_{\mathcal{C}_\ell}  \lar \|\eps^{-1/3}\varphi \Ral_\ell(0)\|_{\mathcal{C}_\ell} \lar \|\eps^{-1/3}\varphi \bar{U}_*^3 \|_{\mathcal{C}_\ell}\le C_1\eps^{\alpha/3},
-\]
+\begin{align*}
+\|\mathcal{S}_\ell(0; w^*,\eps) \|_{\mathcal{C}_\ell} &= \|A_\ell^{-1}\left(\eps^{-1/3}\varphi \mathcal{R}_\ell(W_\ell),w^*)\right)\|_{\mathcal{C}_\ell}\\  
+&\lar \|\eps^{-1/3}\varphi \Ral_\ell(0)\|_{\mathcal{C}_\ell}\\
+&\lar \|\eps^{-1/3}\varphi \bar{U}_*^3 \|_{\mathcal{C}_\ell}\le C_1\eps^{\alpha/3},
+\end{align*}
 for some constant $C_1$ independent of $\eps,w^*$.
 
 \item The map $\mathcal{S}_\ell: \mathcal{C}_\ell \to \mathcal{C}_\ell$ is well defined and smooth in $W_\ell$.
@@ -1160,7 +1170,7 @@ Hence, fix $w^* = \rmO(\eps^{1/2-\alpha/3})$ and by a similar estimate to \eqref
 This region corresponds to the time-$t$ interval $\{t: 0<t<t^*\}$. We will give the precise form of the solution in this region and prove the needed properties.
 
 \subsection{Solution in region C}
-\begin{theorem}\label{thm:s}
+\begin{Theorem}\label{thm:s}
 Fix $\delta_->0, \alpha>0$ small enough, there exists $\eps_C>0$ and a constant $C=C(\delta_-,\alpha)$ such that for all $0<\eps <\eps_C$, and $w_0$ with $|w_0| \le  C\eps^{1-\alpha/3}$, a solution $u_C$ of the form 
 \begin{equation}
 u_C(t) = u_s(t) + w_s(t),
@@ -1174,7 +1184,7 @@ exists on the time interval $t \in (0, t^*)$. Where $u_s$ is the function define
 |w_s(t)| \le C\eps^{1-\alpha/3} (\eps t -\delta_-)^{-1},
 \end{equation}
 for $t \in (t^*, \eps^{-1}\delta_-)$.
-\end{theorem}
+\end{Theorem}
 
 
 This theorem will be proved in the rest of this section.
@@ -1247,12 +1257,12 @@ A_s w = \left(\frac{d}{d\sigma}w - cw, w(\sigma_0)\right),
 defined on the dense subset $\mathcal{D}(A_s) \subset \mathcal{C}_s$.
 
 
-\begin{proposition}\label{inv_A_s}Fix $\eps_3 >0$, there is a constant $C$ so that
+\begin{Proposition}\label{inv_A_s}Fix $\eps_3 >0$, there is a constant $C$ so that
 the operator $A_s : \mathcal{D}(A_s)\subset \mathcal{C}_s \to \mathcal{C}_s\times \mathbb{R}$ is invertible. The inverse $A_s^{-1}(\eps) : \mathcal{C}_s \times I_s \to \mathcal{C}_s$ is bounded uniformly for $\eps$ with $0<\eps<\eps_3$, and $I_s$ is the interval
 \[
 I_s =\{x : |x|\le C\delta^{-1}_-\eps^{1-\alpha/3}\}.
 \]
-\end{proposition}
+\end{Proposition}
 
 \begin{Proof}Unlike previous cases, Lemma \ref{pert_inv} cannot be directly used for the operator $A_s$ since from the asymptotic expansion of $c$ we see that $c(\sigma)$ does not converge to $-2$ as $\sigma \to -\infty$. In fact, $c(\sigma)$ diverges to $-\infty$ as $\sigma \to -\infty$. 
 However, for $\sigma \in (\sigma_0, \sigma^*)$, we have
@@ -1296,11 +1306,11 @@ Therefore, there is $\eps^*>0$ small enough so that for all $\eps \in (0,\eps^*)
 \end{Proof}
 \subsection{Nonlinear estimates}
 Next we estimate the nonlinear term $\eps^{-1/3}\varphi \Ral_s(W_s(\sigma))$ in the $\mathcal{C}_s$ norm. Similar to Propositions \ref{nl_est_r} and \ref{nl_est_l}, we have
-\begin{proposition}\label{nl_est_s} If $W_s \in \mathcal{C}_s$, then $\eps^{-\frac{1}{3}}\varphi \Ral_s(W_s(\sigma))  \in \mathcal{C}_{s}$ and 
+\begin{Proposition}\label{nl_est_s} If $W_s \in \mathcal{C}_s$, then $\eps^{-\frac{1}{3}}\varphi \Ral_s(W_s(\sigma))  \in \mathcal{C}_{s}$ and 
 \begin{equation}\label{nl_est:Rs}
 \| \eps^{-\frac{1}{3}}\varphi \Ral_s(W_s) \|_{\mathcal{C}_s} = \rmO(\delta_-^{1/2}).
 \end{equation}
-\end{proposition}
+\end{Proposition}
 
 \begin{Proof}
 First recall that
@@ -1387,7 +1397,7 @@ which finishes the proof.
 
 \subsection{Fixed point argument and the proof of Theorem \ref{thm:s}}
 In this section we prove Theorem \ref{thm:s}.
-\begin{Proof}[ of Theorem \ref{thm:s}.]
+\begin{Proof}[of Theorem \ref{thm:s}]
 Using the linear operator $A_s$, we rewrite \eqref{ws_bp}
 \begin{align*}
 \begin{split}
@@ -1409,9 +1419,11 @@ By Proposition \ref{inv_A_s} we precondition the above equation with the operato
 From Propositions \ref{inv_A_s} and \ref{nl_est_s}, we conclude 
 \begin{itemize}
 \item At $W_s =0 $ it holds that  
-\[
-\|\mathcal{S}_s(0; w_0,\eps) \|_{\mathcal{C}_s}= \|A_s^{-1}\left(\eps^{-1/3}\varphi \mathcal{R}_s(0),w_0)\right)\|_{\mathcal{C}_s}  \lar \|\eps^{-1/3}\varphi \Ral_s(0)\|_{\mathcal{C}_s} \lar \|\eps^{2/3}\varphi  \|_{\mathcal{C}_s}=C_1\eps^{\alpha/3}.
-\]
+\begin{align*}
+\|\mathcal{S}_s(0; w_0,\eps) \|_{\mathcal{C}_s} &= \|A_s^{-1}\left(\eps^{-1/3}\varphi \mathcal{R}_s(0),w_0)\right)\|_{\mathcal{C}_s}\\  
+&\lar \|\eps^{-1/3}\varphi \Ral_s(0)\|_{\mathcal{C}_s}\\ 
+&\lar \|\eps^{2/3}\varphi  \|_{\mathcal{C}_s}\le C_1\eps^{\alpha/3}.
+\end{align*}
 for some constant $C_1$ independent of $\eps,w_0$.
 
 \item The map $\mathcal{S}_s: \mathcal{C}_s \to \mathcal{C}_s$ is well defined and smooth in $W_s$.
@@ -1505,7 +1517,7 @@ uniformly in $u_0$ and
 Hence we divide the right hand side of \eqref{match_ab_exp} by $\eps^{1/3}$, and apply the implicit function theorem around the point $(u_0=\bar{u}_0, \eps=0)$ to conclude that there exist a branch $u_0 = u_0(\eps)$ with $u_0(\eps)  = \bar{u}_0 + \rmO(\eps^{(1-\alpha)/3})$ which solves the matching condition \eqref{match_ab}. 
 
 Therefore, we have proved the following theorem, which implies Theorem \ref{thm:main}.
-\begin{theorem}\label{thm:glue}
+\begin{Theorem}\label{thm:glue}
 Let $u_-(\mu)$ be the attracting branch of the critical manfold defined in \eqref{singular} and $\bar{u}_0$ be the value defined in \eqref{def:bar_u_0}.
 Fix $\alpha>0$ and $\delta_-,\delta_+>0$ small enough, there exist $\eps_0>0,$ and a constant $C=C(\delta_-,\delta_+,\alpha)$, such that for all $0<\eps<\eps_0$ and $u_i$ with $|u_i - u_-(-\delta_-)| \le C\eps^{1-\alpha/3}$, there exist a branch of initial conditions $u_0= u_0(\eps) = \bar{u}_0 + \rmO(\eps^{(1-\alpha)/3})$, such that a solution of 
 \eqref{main_eqn} with the initial condition
@@ -1522,8 +1534,8 @@ and
 \mu(t) = \eps t -\delta_-,
 \end{equation}
 exists on $t \in (0,T)$. Moreover, all of the correction functions $w_r, w_\ell$ and $w_s$ satisfy the properties stated in Theorems \ref{thm:r}, \ref{thm:l} and \ref{thm:s}, respectively.
-\end{theorem}
-\begin{Proof}[\textbf{ of Theorem \ref{thm:main} and \ref{cor:main}}.]
+\end{Theorem}
+\begin{Proof}[\textbf{of Theorem \ref{thm:main} and \ref{cor:main}}]
 Theorem \ref{thm:main} follows from Theorem \ref{thm:glue} almost directly, we just need to show the expansions \eqref{T_exp_+} and \eqref{T_remainder_exp}. 
 
 Recall that $\Omega_\infty(u_0)$ depends smoothly on $u_0$ by Proposition \ref{para_ric}, hence there is a constant $C$ such that
@@ -1608,9 +1620,9 @@ Let $T_*$ be the time of flight for a solution which starts at $\mu = -2\delta_-
 which satisfies the assumption of Theorem \ref{thm:glue} if we restart the equation with $u=u(T_*)$ and $\mu = -\delta_-$ at $t = 0$ and follow this trajectory, by Theorem \ref{thm:glue} we conclude that the trajectory hit the section $\Delta_{out}$ at the point $(h(\eps), \delta_+)$ with $h(\eps)$ has the expansion \eqref{T_exp_+}.
 
 \begin{figure}[ht]
- \centering % centering figure
- \scalebox{0.6} % rescale the figure by a factor of 0.3
- {\includegraphics[angle = 0, origin = c]{pictures/contraction_Fenichel.eps}} % importing figure
+\centering % centering figure 
+ \scalebox{0.5} % rescale the figure by a factor of 0.3
+ {\includegraphics[angle = 0, origin = c]{figures/contraction_Fenichel.eps}} % importing figure
  % labeling to refer it inside the text
  \caption{Region $K$ in Corollary \ref{cor:main}}\label{fig:contraction_Fenichel} 
 \end{figure}
@@ -1620,134 +1632,12 @@ The above argument can be seen more directly in figure \ref{fig:contraction_Feni
 
 \textbf{Remark:} The last part where we used Fenichel theory to track how a solution arrives exponentially close to the slow manifold $u_-^\eps(\mu)$ could be done, as in \cite{faye2015existence}, using functional analytic methods as well. By using function spaces with suitably centered exponential weights and exploting the location of ``touchdown'' and ``takeoff'' between the slow manifold and the solution in stable and unstable manifolds as free parameters, Faye and Scheel was able to track the solution in a way similar to the Exchange Lemma as in \cite{Bru_tracking}, \cite{Jones_tracking}, and \cite{Jones_exchange_lemma}.
 
-\section*{Appendix}
-\renewcommand{\thesubsection}{\Alph{subsection}}
-We first show how to extend the asymptotic expansion \eqref{ric_asy} to a more general family of solutions.
-\subsection{A family of solutions to the Riccati equation }
+%\section*{Appendix}
+%\renewcommand{\thesubsection}{\Alph{subsection}}
 
 
-\begin{Proof}[\textbf{ of Proposition \ref{para_ric}}] To get the dependence from $u_0$ to $\Omega_\infty$, we first add the equation $\frac{d}{ds}s=1$ to \eqref{ric} to get an autonomous $2-$dimensional system in the $(s,u)$ plane. Consider a small neighborhood $I$ containing $\bar{u}_0$ on the vertical $u$-axis, then $u_R(s; u_0)$ is the trajectory that starts at $u_0 \in I$. The map $P_1 : I \to \mathbb{R}$ defined by $P_1(p) = u(2; p)$ is smooth in $p$, as the blow up time for $\bar{u}_R(s;\bar{u}_0)$ is $\Omega_0 >2$. Moreover, the image $P_1(I)$ is a finite interval on the vertical line $s=2$ containing $\bar{u}_R(2;u_0)$ bounded away from $0$, since the trajectory $u_R(s;\bar{u}_0)$ crosses the horizontal axis around $s=1$ and the vector field goes upwards in the first quadrant of the $(s,u)$-plane.
-
-Denote $\tilde{u}_0:= P_1(u_0)$ for brevity (technically, the interval $P_1(I)$ is a small section of the line $s=2$, with a little abuse of notation, we identify $\tilde{u}_0$ with the second coordinate of the point $P_1(u_0)$). Again we make a change of variable in \eqref{ric} by setting $z(s) = 1/u(s)$. Then $z$ satisfies 
-\[
-\frac{d}{ds}z(s) = -z^2s -1.
-\]
-Let $J = \{ 1/\tilde{u}_0 \mid  \tilde{u}_0 \in P_1(I)\}$ and $z(s; 1/\tilde{u}_0)$ is the trajectory which starts at $1/\tilde{u}_0$. We claim that $z(s; 1/\bar{u}_0)$ reaches $0$ at a finite time $\Omega_\infty = \Omega_\infty(1/\bar{u}_0)$. To see this, first notice there is no equilibrium for the two dimensional system $\frac{d}{ds}s=1, \frac{d}{ds}z=-z^2s-1$. Then, on the boundary $s=2$, the vector field takes the form $(1,-2z^2-1)$, which makes any trajectory starting at a point on $J$ moving down towards the right. Moreover, the vector field $(1,-sz^2-1)$ always pointing down in the first quadrant of the $(s,z)$ plane, so trajectories cannot go upwards. Lastly, the vector field crosses the horizontal axis non-tangentially, it identically equals $(1,-1)$ throughout the line $z=0$, hence, any trajectory which starts at a point on $J$ will cross $z=0$ in finite time at a unique point $\Omega_\infty = \Omega_\infty(1/\tilde{u}_0)$. The dependence of $\Omega_\infty$ on $1/\tilde{u}_0$ is smooth by the smooth dependence on initial conditions.
-
- We now define another map $P_2 : J \to \mathbb{R}$ by $P_2(1/\tilde{u}_0) = \Omega_\infty(1/\tilde{u}_0)$, we get a smooth map $P: I \to \mathbb{R}$ by the composition
- \[
- P =P_2 \circ f \circ P_1,
- \] 
- where $f(z) = 1/z$ is the inversion map. Since each of the map in the composition is smooth, $P: u_0 \mapsto \Omega_\infty = \Omega_\infty(u_0)$ is smooth as well.
-
-To get the asymptotic expansion, we set $\xi = \Omega_\infty-s$, then $\tilde{z}(\xi)=z(\Omega_\infty-\xi)$ solves
-\[
-\frac{d}{d\xi} \tilde{z} = \tilde{z}^2(\Omega_\infty-\xi)+1,
-\]
-and $\tilde{z}(0) = 0$.
-
-Hence we can assume the expansion for $\tilde{z}$ near $\xi=0$ is of the form
-\[
-\tilde{z} = \xi + z_2\xi^2+z_3\xi^3 + \rmO(\xi^4),
-\]
-for some constant $z_2,z_3$. Differentiating this expansion, use the equation $\tilde{z}$ solves and comparing coefficients, we find that $z_2 = 0, z_3 = \Omega_\infty/3$.  Changing back from $\tilde{z}(\xi)$ to $z=z(s)$ with $s = \Omega_\infty-\xi$ and recall $z(s) = 1/u(s)$, we find that $u_R(s;u_0)$ has expansion \eqref{ric_exp} with remainder $r$ satisfies \eqref{ric_reminder}.
-
-
-\end{Proof}
-
-Next we show the main perturbation lemma used to prove the invertibility of the linearized operators at the ansatz.
-\subsection{Uniform invertibility of boundary value problems }
-\begin{lemma}\label{pert_inv}
-Consider the following boundary value problems 
-\begin{subequations}
-\label{lin_bv}
-\begin{align}
-       &\dot{u}(\sigma) = a(\sigma) u + f(\sigma), \hspace{0.2in} u(L)= u_L,         \label{eqn_pos_line}  \\
-              &\dot{u}(\sigma) = b(\sigma) u + g(\sigma), \hspace{0.2in} u(-M)= u_M,         \label{eqn_neg_line}
-\end{align}
-\end{subequations}
-
-where \eqref{eqn_pos_line} is posed on $\sigma \in (\sigma_0,L)$ with $L>\sigma_0$ and \eqref{eqn_neg_line} is posed on $\sigma \in (-M,\sigma_0)$ with $M>\sigma_0$. 
-
-Assume $a(\sigma), b(\sigma)$ are continuous functions such that 
-\begin{subequations}
-\label{ode_asy}
-\begin{align}
-       &a(\sigma) \to a_+>0, \hspace{0.2in} \sigma \to \infty      ,  \label{ode_asy_a}  \\
-       &b(\sigma) \to b_- < 0, \hspace{0.2in} \sigma \to -\infty,         \label{ode_asy_b}
-\end{align}
-\end{subequations}
-then \eqref{lin_bv} possess unique solutions $u_a,u_b$ which satisfies
-\begin{subequations}
-\label{ode_est}
-\begin{align}
-       &|u_a|_\infty \le C_a(u_L+|f|_\infty),  \label{ode_est_a}  \\
-       &|u_b|_\infty \le C_b(u_m+|g|_\infty),         \label{ode_est_b}
-\end{align}
-\end{subequations}
-for some constants $C_a, C_b$ independent of $L$ and $M$.
-\end{lemma}
-
-\begin{Proof}
-We only prove the estimate \eqref{eqn_pos_line} since the other case is similar. Also, without loss of generality, we assume that $\sigma_0 = 0$.
-
-To begin with, consider the asymptotic equation 
-\begin{equation}\label{asy_eq}
-\dot{u} = a_+ u + f(\sigma),\hspace{ 0.5in } u(L) = u_L.
-\end{equation}
-posed on $\sigma \in [0, L]$.
-Then the estimate \eqref{ode_est_a} holds for \eqref{asy_eq} since in this case we have
-\begin{align*}
-u(\sigma) &= e^{a_+(\sigma-L)}u_L + \int_L^t e^{a_+(\sigma-s)} f(s)ds \\ 
-&\le 2|u_L| + \left|\int_L^t e^{a_+(\sigma-s)}ds \right| |f|_\infty\\ 
-&\le  2|u_L|+\frac{1}{a_+} \left|e^{t-L}-1\right||f|\infty\\
-& \le 2(|u_L|+|f|_\infty ).
-\end{align*}
-
-Next, give $\eta>0$ small enough and independent of $L$, there exist $\sigma_* \le L$ such that $|a(\sigma)- a_+|< \eta$ for all $\sigma>\sigma*$. It is important to note here that one can choose $\sigma_*$ independent of $L$ as long as $L$ is large enough. A Neumann series argument shows that in this case the operator 
-\[ u \mapsto
- \left(\frac{d}{dt}u-a(t)u, u(L)\right)
-\] is a $\eta-$perturbation of the asymptotic operator
-\[ u \mapsto
- \left(\frac{d}{dt}u-a_+u, u(L)\right),
-\]
-as a densely defined operator on $\mathcal{C}^1(\sigma_*,L) \subset \mathcal{C}(\sigma_*,L)$, so similarly from step I, we conclude that 
-\[
-\sup_{\sigma \in (\sigma_*,L)} |u(\sigma)| \le C(|u|_L + |f|_\infty)
-\]
-for some constant $C$ independent of $L$.
-
-Finally, for $\sigma \in (0,\sigma_*)$, the solution is given by the following formula
-\[
-u(\sigma) = \exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right) u(\sigma_*) + \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)f(s)ds 
-\]
-since $\sigma_*< \infty$ and does not depend on $L$, there exist a constant $C_1$ independent of $L$ so that 
-\[
-\max\left\{ \left|\exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right)\right|, \left| \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)\right| \right\} \le C_1.
-\]
-Moreover, the value $u(\sigma_*)$ satisfies
-\[
-u(\sigma_*) \le \sup_{\sigma \in (\sigma_*,L)} |u(\sigma)| \le C_2(u_L + |f|_\infty)
-\]
-for some constant $C_2$ independent of $L$ from the conclusion in step 2.
-Therefore on $[0,\sigma_*]$ the solution satisfies
-\[
-\sup_{\sigma \in [0,\sigma_*]}|u(\sigma)| \le C_1C_2(u_L+|f|_\infty) +C_1|f|_\infty \le C(u_L+|f|_\infty)
-\]
-where the constant $C$ does not depend on $L$. Therefore we conclude that
-\[
-\sup_{\sigma \in [0,L]} = |u|_\infty \le C(u_L+|f|_\infty)
-\]
-which is \eqref{ode_est_a}.
-%\cite{plantdisp}
-\nocite{*}
-\end{Proof}
-%\subsubsection{Matching at \texorpdfstring{$\sigma^*$}{sigma^*} }
-
-
-
+\iffalse
 \bibliographystyle{abbrv}
 \bibliography{bib/pass_fold_ref}
+\fi
 
-
-\end{document}

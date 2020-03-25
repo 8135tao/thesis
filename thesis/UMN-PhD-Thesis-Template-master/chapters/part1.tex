@@ -1,12 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %neutrino_physics.tex: Chapter on neutrino physics:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Part 1}
-\label{Nonlocal spikes}
+\chapter{Nonlocal spikes}
+\label{thesis_p1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-there exist $a+b=c$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\iffalse
 \begin{center}
 
 {\fontsize{17}{17}\fontfamily{cmr}\fontseries{b}\selectfont{Bifurcation to coherent structures in nonlocally coupled systems}}\\[0.2in]
@@ -21,7 +20,6 @@ University of Minnesota, School of Mathematics,   206 Church St. S.E., Minneapol
 
 \vspace*{0.2in}
 
-\iffalse
 \begin{abstract}
 \noindent 
 We show bifurcation of localized spike solutions from spatially constant states in systems of nonlocally coupled equations in the whole space. The main assumptions are a generic bifurcation of saddle-node or transcritical type for spatially constant profiles, and a symmetry and second moment condition on the convolution kernel. The results extend well known results for spots, spikes, and fronts, in locally coupled systems on the real line, and for radially symmetric profiles in higher space dimensions. Rather than relying on center manifolds, we pursue a more direct approach, deriving leading order asymptotics and Newton corrections for error terms. The key ingredient is smoothness of Fourier multipliers arising from discrepancies between nonlocal operators and their local long-wavelength approximations. 
@@ -118,7 +116,8 @@ Let $I_k$ denote the identity matrix of size $k$ and consider the linearized ope
 
 \begin{Hypothesis}{(L)}We assume that  $\K$ satisfies the following properties:
 \begin{enumerate}
-\item \emph{localization:  }$\K$ has finite moments of order 2, that is, $\K(x),\, |x|^2\K(x) \in L^1(\R^n,\R^{k\times k})$;
+\item \emph{localization:  }$\K$ has finite moments of order 2, that is, 
+\[\K(x),\, |x|^2\K(x) \in L^1(\R^n,\R^{k\times k});\]
 \item \emph{symmetry: } $\K(x)=\K(\gamma x)$ for all $x\in\R^n$ and all $\gamma \in \Gamma\subset \mathbf{O}(n)$, a subgroup of the orthogonal matrices with 
 \[
 \mathrm{Fix}\, \Gamma=\left\{x\mid\gamma x=x, \mbox{ for all } \gamma\in\Gamma\right\}=\{0\};
@@ -283,9 +282,6 @@ Finally, we use the usual Fourier transform on $\R^n$,
 \]
  for a Schwartz function $f$, which extends by isometry to all $f \in L^2(\R^n,\R^k)$. 
 
- \begin{Acknowledgment}
- A.S. and T.T. gratefully acknowledge support under grant NSF-DMS--1612441.
- \end{Acknowledgment}
 
 \section{Normal forms and scalings}\label{s:2}
 We change variables in $\R^k$ such that the linear part takes a simple form, Section \ref{s:2.1}, and introduce the long-wavelength scaling that exhibits the leading order asymptotics in Section \ref{s:2.2}.
@@ -389,7 +385,7 @@ It follows that $P\That(\xi)QH(\xi)$ is invertible with uniform bounds on the in
 \end{pmatrix} + \rmo(|\xi|)
 $, for $\xi \neq 0$ small.
 
-For $\xi$ bounded away from the origin, it follows from Hypothesis (L)(v) that $P\That(\xi)QH(\xi)$ is invertible for each $\xi$. Moreover, $\That(\xi) \to I_k$ for $|\xi|\to \infty$  and $H(\xi) \to I_k$ by Riemann-Lebesgue. We therefore conclude that $P\That(\xi)QH(\xi)$ is  invertible on $\R^n\backslash\{0\}$ with uniform bounds.
+For $\xi$ bounded away from the origin, it follows from Hypothesis (L)(v) that the matrix $P\That(\xi)QH(\xi)$ is invertible for each $\xi$. Moreover, $\That(\xi) \to I_k$ for $|\xi|\to \infty$  and $H(\xi) \to I_k$ by Riemann-Lebesgue. We therefore conclude that $P\That(\xi)QH(\xi)$ is  invertible on $\R^n\backslash\{0\}$ with uniform bounds.
 
  We then define the pseudo-differential operator $L$ by setting its symbol $\widehat{L}(\xi)$ equal to $[P\That(\xi)QH(\xi)]^{-1}$. Then $\widehat{L} (\xi) \in L^\infty$ and it follows that
  \[
@@ -455,9 +451,9 @@ We are in particular interested in the terms $\mu v_\mathrm{c}$ and $v_\mathrm{c
 Indeed, to verify the first assertion, use the definition of $L$ in Lemma \ref{Lem1}.  We find $\widehat{L}_\mathrm{cc}(0)=1$ and $\widehat{L}_\mathrm{ch}(0)=(0,\ldots,0)$, thus verifying the second equality $a_{101}^c=\widehat{L}_\mathrm{cc}(0)a_{101}^c+\widehat{L}_\mathrm{ch}a_{101}^h$. 
 To verify the first equality, let $e_1$ denote the standard coordinate vector $(1,0,\ldots,0)^T \in \R^k$. Then the derivative 
 $a_{101}^c=\dfrac{\partial^2}{\partial \mu \partial v_\mathrm{c}}  \mathcal{H}_\mathrm{c}(0,0;0)$ is given by
-\[
-\langle D_{\mu,V}\mathcal{H}(0;0)e_1,e_1\rangle=\langle D_{\mu,U} P\Nl(0;0)Q e_1,e_1\rangle = \langle PD_{\mu,U}\Nl(0;0) {\e},e_1\rangle  = \langle D_{\mu,U}\Nl(0;0){\e},{\e}^*\rangle = \alpha,
-\]
+\begin{align*}
+\langle D_{\mu,V}\mathcal{H}(0;0)e_1,e_1\rangle&=\langle D_{\mu,U} P\Nl(0;0)Q e_1,e_1\rangle\\ &= \langle PD_{\mu,U}\Nl(0;0) {\e},e_1\rangle  = \langle D_{\mu,U}\Nl(0;0){\e},{\e}^*\rangle = \alpha,
+\end{align*}
 which verifies the first equality $\alpha=a_{101}^c$. The computations for $\beta$ are similar.
 
 In the next paragraph, we shall make a series of rescalings to further simplify the equation and exhibit leading order parts.
@@ -514,8 +510,6 @@ To further ease notation, we drop tildes, and use $v_j,\B_j,\Rm_j$ ($j=\mathrm{c
 
 
 \section{Lyapunov-Schmidt reduction, leading-order ansatz, and corrections}\label{s:3}
-
-
 
 We first solve \eqref{rseqnuh} to obtain $v_\mathrm{h}$ as a function of $v_\mathrm{c}$ using a fixed point argument in Section \ref{s:3.1}. We then substitute this function back into  \eqref{rseqnu0} to obtain a scalar equation for $v_\mathrm{c}$ and $\eps$, which we solve again using a fixed point argument in Section \ref{s:3.2}. For this, the crucial ingredients are estimates on the operator $M^\eps$ stated in Lemma \ref{estmult}. 
 
@@ -931,7 +925,7 @@ This strategy has been carried out in the case of exponentially localized kernel
 
 
 
-
+\iffalse
 \small
 
 \begin{thebibliography}{10}
@@ -1098,7 +1092,7 @@ S.~Zelik and A.~Mielke.
 \newblock {\em Mem. Amer. Math. Soc.}, 198(925):vi+97, 2009.
 
 \end{thebibliography}
-
+\fi
 
 
 
