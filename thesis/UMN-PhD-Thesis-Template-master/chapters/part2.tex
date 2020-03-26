@@ -24,107 +24,18 @@ University of Minnesota, School of Mathematics,   206 Church St. S.E., Minneapol
 \end{abstract}
 \fi
 
-\section{Introduction}
-In this paper we study singularly perturbed ordinary differential equations (ODEs) of the form
-
-\begin{align}\label{intro_slow}
-\begin{split}
-\eps \dot{x} &=  f(x,y;\eps),\\
-\dot{y } &=   g(x,y;\eps),   
-\end{split}\hspace{0.2in} x\in \mathbb{R}^n, \hspace{0.2in} y \in \mathbb{R}^m, \hspace{0.2in} 0<\eps \ll 1,
-\end{align}
-where $f$ and $g$ are $C^k$ functions for $k>=3$.
-
-The standard way of studying \eqref{intro_slow} is using methods from geometric singular perturbation theory. An brief overview of this theory involves treating \eqref{intro_slow}, which is referred to as the \textit{slow-system}, together with its  equivalent counterpart, the \textit{fast-system}:
-\begin{align}\label{intro_fast}
-\begin{split}
-x' &=  f(x,y;\eps),\\
-y' &=  \eps g(x,y;\eps),   
-\end{split}
-\end{align}
-
-where if $\tau$ denotes the (slow) time variable in \eqref{intro_slow}, then $t = \tau/\eps$ is the (fast) time variable used in \eqref{intro_fast}. The dynamics can then be studied by setting $\eps = 0$ in both systems to obtain the so-called \textit{reduced problem}
-\begin{align}\label{intro_reduced}
-\begin{split}
-0 &=  f(x,y,0),\\
-\dot{y} &=   g(x,y,0),   
-\end{split}
-\end{align}
-
-and the \textit{layer problem}
-\begin{align}\label{intro_layer}
-\begin{split}
-x' &=  f(x,y,0),\\
-y' &=  0. 
-\end{split}
-\end{align}
-The basic premise of the theory, which was first laid out by Fenichel, is that the dynamics of reduced problem \eqref{intro_reduced} happens on the \textit{critical manifold}
-\[
-S:=  \{ (x,y) \mid f(x,y;0) = 0 \},
-\]
-one then focuses on a \textit{normally hyperbolic submanifold} of equlibra $S_0 \subset S$ of the layer problem \eqref{intro_layer}, which will perturb to a so-called ``slow manifold'', $S_\eps$ for $0<\eps \ll 1$, on which the dynamics of \eqref{intro_slow} is an $\eps$-perturbation of the reduced problem \eqref{intro_reduced}. In addition to the existence of a slow manifold, we have the existence of stable and unstable invariant foliation along with base $S_0$, which also persists for $\eps>0$. More details can be found in \cite{Jones_GSPT} or \cite{chris_kuehn_book}, for example.
-
-The above approach relies heavily on the notion of normal hyperbolicity, which may not be always satisfied in the problems to be studied. The most common case is the so-called \textit{fold point}, where the critical manifold $S$ loses its normal hyperbolicity near bifurcation points due to a zero eigenvalue in the Jacobian $\frac{\partial f }{\partial x}$.
-
-To overcome these difficulties, Krupa and Szmolyan proposed the method of \textit{blow-up} to extend the reach of geometric singular perturbation theory in \cite{KrupaSz}. Roughly speaking, it is a set of coordinate transformations which desingularizes the vector field near the fold point so that information can be gained by using standard tools in dynamical system.
 
 
-For fold points, their example was the following extended system 
-\begin{align}\label{ori_eqn}
-\begin{split}
-u' &= \mu+u^2+ f(u,\mu; \eps),\\
-\mu' &=  \eps g(u,\mu; \eps), \\
-\eps' &= 0
-\end{split}
-\end{align}
-where $(\mu, u, \eps)$ in a sufficiently small neighborhood $\mathcal{U}$ of the origin so that the critical manifold 
-\[
-S_0 = \{ (\mu, u) \mid \mu + u^2 +f (u,\mu ;0) = 0\}
-\]
- has only $(0,0)$ as the fold point.
- Further, a generic condition on the nonlinearity $f, g$ are assumed, so that they have the following expansions
-\begin{equation} \label{fold_nonlinearity}
-f(u,\mu;\eps) = \rmO(\eps, u\mu,\mu^2,u^3),\hspace{0.2in}
-g(u,\mu;\eps) = 1+\rmO(u,\mu,\eps),
-\end{equation} 
-for $(\mu, u,\eps) \in \mathcal{U}$.
-
-\begin{figure}[ht]
- \centering % centering figure
- \scalebox{0.3} % rescale the figure by a factor of 0.3
- {\includegraphics{figures/passage_fold.eps}} % importing figure
- \caption{critical manifold and slow manifolds, section near the fold}\label{fig:passage}
-\end{figure}
-
- Away from the fold point $(0,0,0)$, there exist the attracting manifold $M_a$ with a section $S_a$ sketched in Figure \ref{fig:passage}. By standard Fenichel's theory, $S_a$ perturbs to $S_{a,\eps}$ until it reaches the fold point, thus a natural question is to track how a trajectory starting on the slow manifold $S_{a,\eps}$ passes through the fold point.
-
-For a small interval $J$ containing $-\sqrt{\delta}$, Krupa and Szmolyan starts by setting two sections $\Delta_{in} = \{(-\delta, u) : u \in J \}$ and $\Delta_{out} = \{( \mu ,\sqrt{\delta}): \mu \in \mathbb{R})\}$ with $\delta>0$ small but fixed, which are also shown in figure \ref{fig:passage}. To track the passage through the fold amounts to study the transition map 
-\[
-\pi: \Delta_{in} \to \Delta_{out},
-\]
-
-Krupa and Szmolyan then proceed by defining the blow up transformation
-\[
-u =\bar{r} \bar{u},  \quad \mu = \bar{r}^2 \bar{\mu}, \quad  \eps = \bar{r}^3 \bar{\eps},
-\]
-which ``blows up'' the vector field of the extended $(\mu, u, \eps)$ system near $(0,0,0)$ into a vector field on the ball $B = S^2 \times [0,\eps_0^{1/3}] \ni (\bar{u}, \bar{\mu}, \bar{\eps}, \bar{r})$ for some $\eps_0>0$ small, and further directional blow-ups to obtain charts $K_1,K_2,K_3$ which was used to describe the flows in regions near different parts of the manifold $B$. After a careful and thorough analysis, they were able to prove the following results:
-\begin{Theorem}\label{ks_main}(Theorem 2.1 in \cite{KrupaSz})
-
-For $\eps$ sufficiently small, the following statements are true:
-\begin{enumerate}
-\item The manifold $S_{a,\eps} $ passes through  $\Delta_{out}$ at a point $(h(\eps), \sqrt{\delta})$ where $h(\eps) = \rmO(\eps^{2/3})$.
-\item The transition map $\pi$ is a contraction with rate $\rmO(e^{-c/\eps} )$, where $c$ is a positive constant independent of $\eps$.
-\end{enumerate}
-\end{Theorem}
 
 
-In this paper, we focus on the same problem \eqref{ori_eqn} with an aim to recreate the result of Theorem \ref{ks_main} via a different, functional-analytical approach. Instead of proceeding with the geometrically-flavored blow-up approach, we directly prove a trajectory exists with the properties claimed in Theorem \ref{ks_main} by dividing the time of passage into appropriate parts and setting up a corresponding ansatz in each region, closing the arguments with carefully reformulating the existence question as a fixed-point argument.
 
+In this chapter we prove Theorem \ref{thm:main} and Corollary \ref{cor:main}. We first prepare ourselves with the setup of the problem in the following sections.
+ 
 \paragraph{Outline}
-The reminder of the paper is organized as follows. In Section \ref{sec_main} we give a precise statement of our result, as well as an overview of our set ups. In Sections \ref{sec_A}, \ref{sec_B} and \ref{sec_C} we construct the solutions and in Section \ref{sec_glue} we show how to piece together all the parts to arrive at our main results.
+The reminder of this chapter is organized as follows. In Section \ref{t_sigma} we explain how we divide up the passage time into 3 different regions $A$, $B$, and $C$ to prepare for the proof of  Theorem \ref{thm:main}. Then in Sections \ref{sec_A}, \ref{sec_B} and \ref{sec_C} we construct the solutions and finally in Section \ref{sec_glue} we show how to piece together all the parts to arrive at our main results.
 
 
-\paragraph{Notation}Throughout this paper we will use the following notations.
+\paragraph{Notation}Throughout this chapter we will use the following notations.
 \begin{itemize}
 \item We use $A \lar B$ to indicate that there is a constant $C$ such that $A \le C \cdot B$, independent of the properties of $A$ and $B$.
 
@@ -135,179 +46,7 @@ The reminder of the paper is organized as follows. In Section \ref{sec_main} we 
 \item   We denote the Euclidean norm in Euclid space as $|\cdot|$, the norm in a general Banach space $X$ as $\|\cdot\|_X$, and we use $\|A\|_{X\to Y}$ to denote the operator norm for the linear operator $A: X\to Y$ which maps from the function space $X$ into $Y$.
 \end{itemize}
   
-
-
-
-\section{Main Result}\label{sec_main}
-Wwe first make a change of variable to transform \eqref{ori_eqn} into a more convenient form in Section \ref{euler_m}. Then we introduces the different ansatz used in Section \ref{Ric_def} and \ref{c_mfld}. We then give a statement of our main result in Section \ref{main_sum} and in Section \ref{t_sigma} we explain how we divide up the passage time into 3 different regions $A$, $B$, and $C$ to prepare for the proof of this theorem.
-
-\subsection{Euler multiplier}\label{euler_m}
-Let $\tau$ denote the independent time variable in \eqref{ori_eqn}, since for $u,\mu,\eps$ small, $g(u,\mu,\eps) = 1 + \rmO(u,\mu,\eps)>0$, we can define a new time $t = t(\tau)$ by $\frac{dt}{d\tau} = g$, consequently, \eqref{ori_eqn}  is transformed into
-\begin{align}\label{euler_ori_eqn}
-\begin{split}
-\frac{d}{dt}u &= \mu+u^2+ \tilde{f}(u,\mu;\eps),\\
-\frac{d}{dt}\mu &=  \eps ,
-\end{split}
-\end{align}
-where now $\tilde{f}$ satisfies the asymptotics
-\begin{equation}\label{nonlinear_asy_new}
-\tilde{f}(u,\mu,\eps) = \rmO(\eps,  u\mu, \mu^2,\eps u, \eps \mu, \eps u^2, u^3).
-\end{equation}  
-
-The critical manifold 
-\[
-\tilde{S}_0 = \{ (\mu, u) \mid \mu + u^2 + \tilde{f}(u,\mu;0) = 0\},
-\]
-still has $(0,0,0)$ as the only fold point, and our goal is to track how a trajectory of the flow of \eqref{euler_ori_eqn} passes through the fold. Following the set up of the sections $\Delta_{in}$ and $\Delta_{out}$ in Krupa-Szmolyan, we propose the following boundary conditions
-
-\begin{equation}\label{ori_bc}
-\mu(0) = -\delta_-, \hspace{0.2in} u(T) = \delta_+,
-\end{equation}
-where $T$ is also an unknown variable which marks the ``time of exit'' as the trajectory hits the section $\Delta_{out}$, and $\delta_{\pm}$ are small positive numbers.
-
-That is, we think the tracking of the passage of the fold as a shooting problem, if we can prove the existence of a solution $(\mu, u)$ to \eqref{euler_ori_eqn} with the boundary condition \eqref{ori_bc}, and give the expansion for the components $\mu$, then we will prove the results in \eqref{ori_eqn}. Our contribution in this paper is that the method we used to prove the existence of such a solution is different than the blow-up approach.
-
-In the rest of the paper, we shall drop the tilde to use $f(u,\mu,\eps)$ as the nonlinearity and $S_0$ to denote the critical manifold.
-
-
-
-\subsection{The Riccati equation}\label{Ric_def}
-First, we want to get an idea of what kinds of ansatz one should use. Consider \eqref{euler_ori_eqn} with $f(u,\mu;\eps) = 0$, which can then be scaled such that $\eps = 1, \mu = s$, and 
-\begin{equation}\label{ric}
-\frac{d}{ds}u(s) = s+u(s)^2,
-\end{equation}
-
-which is the Ricatti equation in its simplest form. We denote any solution to \eqref{ric} as $u_R$, it is known to have a unique solution (denoted by $\bar{u}_R$) with the following asymptotic expansions (see \cite{KrupaSz} as well).
-
-\begin{equation} \label{ric_asy}
-\bar{u}_R(s)=\begin{cases}
-  (\Omega_0-s)^{-1}+\rmO(\Omega_0-s), \text{ as }s \to \Omega_0, \\
- -(-s)^{1/2} -\frac{1}{4}(-s)^{-1} + \rmO(|s|^{-3/2}), \text{ as }s \to -\infty.
-\end{cases}
-\end{equation}
-
-Here the constant $\Omega_0 \approx 2.3381$ is the smallest positive zero of 
-\[
-J_{-1/3}(2z^{3/2}/3)+J_{1/3}(2z^{3/2}/3),
-\]
-where $J_{\pm 1/3}$ are Bessel functions of the first kind.
-
-
-More generally, we consider family of solutions  $u_R(s; u_0)$ of the Riccati equation  \eqref{ric} such that $u_R(0; u_0) = u_0$. That is, we take the initial condition $u_0$ as a parameter to the Riccati equation. For the special Riccati solution $\bar{u}_R$, we define
-\begin{equation}\label{def:bar_u_0}
- \bar{u}_0:= \bar{u}_R(0).
-\end{equation} 
-In fact, using simple phase plane analysis, we can extend the asymptotic results about the special Riccati solution $\bar{u}_R$ to the family of solutions $u_R(s; u_0)$ as follows.
-
-\begin{Proposition}\label{para_ric}
-There exist $\eta>0$ small, so that for all initial condition $u_0$ with $|u_0- \bar{u}_0|<\eta$, there exist a number $\Omega_\infty=\Omega_\infty(u_0)$ which depends on $u_0$ smoothly, and a solution $u_R(s;u_0)$ of \eqref{ric} on $[0, \Omega_\infty(u_0))$ with the following asymptotic expansion as $s\to \Omega_\infty(u_0)$:
-\begin{equation}\label{ric_exp}
-u_R(s;u_0) = \frac{1}{\Omega_\infty-s} +  (\Omega_\infty-s) r(\Omega_\infty-s;u_0),
-\end{equation}
-where the function $r$ is smooth in both variables and satisfies
-\begin{equation}\label{ric_reminder}
-r( \Omega_\infty-s; u_0) = -\frac{\Omega_\infty}{3} + \rmO(\Omega_\infty-s),
-\end{equation}
-as $s \to \Omega_\infty$.
-\end{Proposition}
-We postpone the proof of this proposition to the appendix.
-\subsection{Critical manifold}\label{c_mfld}
-Another piece of the ansatz comes from part of  the critical manifold, we expect this because away from the fold, the critical manifold has an attracting branch $S_a$ which implies trajectory has to stay close to it. 
-
-Recall the critical manifold for \eqref{crit_mfld} is the set of points $(\mu, u) $ in a small neighborhood of the origin which satisfies
-\begin{equation} \label{crit_mfld}
-\mu + u^2 + f(u,\mu; 0) =  0.
-\end{equation}
-
-From \eqref{nonlinear_asy_new} we see that $\mu = -u^2+\rmO(u^3)$, by rescaling $\mu = -\mu_1^2$ with $\mu_1$ positive and $u=\mu_1 u_1$ we obtain
-\[
-u_1^2 = 1 + \rmO(\mu_1),
-\]
-and hence two branches of solutions
-\[
-u_1 = \pm \sqrt{1}+\rmO(\mu_1) \implies u = \pm \sqrt{-\mu}+\rmO(\mu).
-\]
-
-We therefore define
-\begin{align}
-\begin{split}
-u_-(\mu) &= -\sqrt{-\mu} + \rmO(|\mu|),\\
-u_+(\mu) &= +\sqrt{-\mu} + \rmO(|\mu|).
-\end{split}
-\end{align}
-
-
-In particular, we set
-\begin{equation}\label{singular}
-u_s(t)=u_-(\mu(t)) ,
-\end{equation}
-so that
-\[
-0 = \mu(t) + u_s^2(t)+f(u_s(t),\mu; 0).
-\]
-Due to the simple form of \eqref{euler_ori_eqn} and \eqref{ori_bc}, we have that $\mu(t)= \eps t-\delta_-$, hence $u_s(\mu)$ satisfies
-\begin{equation}\label{singularAsy}
-u_s(t) = -\sqrt{\delta-\eps t} + \rmO(|\delta-\eps t|).
-\end{equation}
-
-
-\subsection{Main result - summary} \label{main_sum}
-
-We now state our main result. Recall $\mathcal{U}$ is a neighborhood small enough so that \eqref{fold_nonlinearity} holds for $(\mu, u , \eps) \in \mathcal{U}$.
-
-\begin{Theorem}\label{thm:main}Let $\Omega_0$ be the constant defined in \eqref{ric_asy}.
-Fix $\delta_-, \delta_+>0$ and $\alpha$ with $0<\alpha <3/4$. There exist $\eps_0>0,$ a constant $C=C(\delta,\alpha),$ such that for all $0<\eps<\eps_0$ and $u_i$ with $|u_i -u_-(-\delta) | \le C\eps^{1-\alpha/3}$, a solution of the rescaled system 
-\begin{equation}\label{main_eqn}
-\begin{split}
-\frac{d}{dt}u &= \mu+u^2+ f(u,\mu;\eps), \\
-\frac{d}{dt} \mu &= \eps.  \\
-\end{split}
-\end{equation}
-with the initial condition
-\begin{equation}\label{main_ic}
-\begin{split}
-u(0) &= u_i, \\
-\mu(0) &= -\delta_-,
-\end{split}
-\end{equation}
-
-exists for $t \in (0,T)$, where the end point $T$ is the desired ``exit time'' in the sense that 
-\begin{equation}\label{exit_time_cond}
- u(T) = \delta_+.
-\end{equation}
-
-Moreover, $T$ has the following expansion in $\eps$
-\begin{equation}\label{T_exp_+}
-T = T(\eps ; u_i) = \eps^{-1}\delta_- + \eps^{-1/3}\Omega_0 +  \mathcal{H}(\eps; u_i),
-\end{equation}
-with the term $\mathcal{H}(\eps;u_i)$ satisfies 
-\begin{equation}\label{T_remainder_exp}
-\eps\mathcal{H}(\eps;u_i) = \rmO(\eps^{1-\alpha/3}), \hspace{0.2in} \text{Lip}_{u_i}\eps\mathcal{H}(\eps;u_i) = \rmO(1).
-\end{equation}
-In particular, since $\mu(t) = \eps t -\delta_-$, we have the following expansion of the exit location $\mu(T)$ on the section $\Delta_{out}$ in $\eps$:
-\begin{equation}\label{exit_loc_exp}
-\mu(T) = \eps^{2/3}\Omega_0  + \eps\mathcal{H}(\eps; u_i) = \eps^{2/3}\Omega_0 + \rmO(\eps^{1-\alpha/3}).
-\end{equation}
-
-\end{Theorem}
-
-To fully recover Theorem \ref{ks_main}, we have the following corollary.
-\begin{Corollary}\label{cor:main}
-For $\alpha,\delta_-,\delta_+>0$, there is a compact interval $K \subset (-\infty, u_+(-\delta_-))$, independent of $\eps$ so that for all $u_i \in K$ with $(u_i,\mu,\eps) \in \mathcal{U}$, the same conclusion of Theorem \ref{thm:main} holds. In fact, there exist a constant $c$ independent of $\eps$, such that the Lipschitz constant of $\mathcal{H}(\eps;u_i)$ in the expansion \eqref{T_exp_+} satisfies
-\begin{equation}\label{T_remainder_exp_+}
-\text{Lip}_{u_i} \eps\mathcal{H}(\eps;u_i) = \rmO(e^{-c/\eps}),
-\end{equation}
-for all $u_i \in K$.
-\end{Corollary}
-
-
-
-\textbf{Remark:} Notice $\alpha>0$ could be chosen arbitrary small in the expansion \eqref{exit_loc_exp}. In fact, it is well-known from the matched-asymptotics community that the next order term after $\eps^{2/3}\Omega_0$ is of order $\eps \log(\eps)$.  This is also confirmed in \cite{KrupaSz} using the blow-up methods. 
-
-
- The proof of Theorem \ref{thm:main} and \ref{cor:main} will take up the rest of the paper,  we first prepare ourselves with the setup of the problem in the following sections.
-
-\subsection{Division of regions and the rescaling of time}\label{t_sigma}
+\section{Division of regions and the rescaling of time}\label{t_sigma}
 Now that we can introduce the ansatz. We divide the time from $t=0$ to $t=T$ into three ``Regions'' where we take a different ansatz on each region. 
 
 We first start with the exit time $t=T$ when the trajectory hits the section $\Delta_{out}$. Also, we use $T$ to mark the rightmost boundary of the region $A$, where our proposed solution takes the form
@@ -414,6 +153,7 @@ In summary, the regions in time $\sigma$ are as follows:
 and the following picture summarizes the relationship between the two time scales $t$ and $\sigma$, as well as the corresponding regions divided. 
 
 \begin{figure}[ht]
+\renewcommand\thefigure{2} 
  \centering % centering figure
  \scalebox{0.5} % rescale the figure by a factor of 0.3 
  {\includegraphics[angle = 0, origin = c]{figures/time_scale.eps}} % importing figure
@@ -1620,14 +1360,16 @@ Let $T_*$ be the time of flight for a solution which starts at $\mu = -2\delta_-
 which satisfies the assumption of Theorem \ref{thm:glue} if we restart the equation with $u=u(T_*)$ and $\mu = -\delta_-$ at $t = 0$ and follow this trajectory, by Theorem \ref{thm:glue} we conclude that the trajectory hit the section $\Delta_{out}$ at the point $(h(\eps), \delta_+)$ with $h(\eps)$ has the expansion \eqref{T_exp_+}.
 
 \begin{figure}[ht]
+\renewcommand\thefigure{3} 
 \centering % centering figure 
  \scalebox{0.5} % rescale the figure by a factor of 0.3
  {\includegraphics[angle = 0, origin = c]{figures/contraction_Fenichel.eps}} % importing figure
  % labeling to refer it inside the text
- \caption{Region $K$ in Corollary \ref{cor:main}}\label{fig:contraction_Fenichel} 
+ \caption{Region $K$ in Corollary \ref{cor:main}\label{fig:contraction_Fenichel}}
+ 
 \end{figure}
 
-The above argument can be seen more directly in figure \ref{fig:contraction_Fenichel}, where $K$ is a rectangular region near the section $\Delta_{in}'=\{(-2\delta_-,u)\}$. What Fenichel theory shows is that this region $K$ contracts into a small neighborhood $N$ around near the point $(-\delta_-, u_-(-\delta_-))$, with Lipschitz constant of order $e^{-c/\eps}$ for some constant $c>0$ independent of $\eps$. Inside the region $N$, we can apply the conclusion of Theorem \ref{thm:glue} to continue the trajectory until it hits the section $\Delta_{out}$ at the desired $\rmO(\eps^{2/3})$ location. 
+The above argument can be seen more directly in figure ~\ref{fig:contraction_Fenichel}, where $K$ is a rectangular region near the section $\Delta_{in}'=\{(-2\delta_-,u)\}$. What Fenichel theory shows is that this region $K$ contracts into a small neighborhood $N$ around near the point $(-\delta_-, u_-(-\delta_-))$, with Lipschitz constant of order $e^{-c/\eps}$ for some constant $c>0$ independent of $\eps$. Inside the region $N$, we can apply the conclusion of Theorem \ref{thm:glue} to continue the trajectory until it hits the section $\Delta_{out}$ at the desired $\rmO(\eps^{2/3})$ location. 
 \end{Proof}
 
 \textbf{Remark:} The last part where we used Fenichel theory to track how a solution arrives exponentially close to the slow manifold $u_-^\eps(\mu)$ could be done, as in \cite{faye2015existence}, using functional analytic methods as well. By using function spaces with suitably centered exponential weights and exploting the location of ``touchdown'' and ``takeoff'' between the slow manifold and the solution in stable and unstable manifolds as free parameters, Faye and Scheel was able to track the solution in a way similar to the Exchange Lemma as in \cite{Bru_tracking}, \cite{Jones_tracking}, and \cite{Jones_exchange_lemma}.
