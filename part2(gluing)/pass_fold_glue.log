@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  24 MAR 2020 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  25 MAR 2020 22:41
 entering extended mode
 **./pass_fold_glue.tex
 (pass_fold_glue.tex
@@ -647,7 +647,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figures/time_scale-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/time_scale-eps-converted-to.pdf, id=274, 789.95125pt x 403.5075pt>
+<figures/time_scale-eps-converted-to.pdf, id=271, 789.95125pt x 403.5075pt>
 File: figures/time_scale-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/time_scale-eps-converted-to.pdf>
 Package pdftex.def Info: figures/time_scale-eps-converted-to.pdf  used on input
@@ -677,7 +677,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./figures/contraction_Fenichel-eps-converted-to.
 pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<figures/contraction_Fenichel-eps-converted-to.pdf, id=631, 845.1575pt x 598.23
+<figures/contraction_Fenichel-eps-converted-to.pdf, id=619, 845.1575pt x 598.23
 5pt>
 File: figures/contraction_Fenichel-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -700,86 +700,43 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1878.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1878.
 
 Package rerunfilecheck Info: File `pass_fold_glue.out' has not changed.
-(rerunfilecheck)             Checksum: D6133F4D94362F60E205295BDC075D52;2094.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 506A144539221ED6A73CD2613FB075EB;2090.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1878.
  ) 
 Here is how much of TeX's memory you used:
- 10487 strings out of 480900
- 159300 string characters out of 2898321
- 443819 words of memory out of 3000000
+ 10474 strings out of 480900
+ 159163 string characters out of 2898321
+ 443793 words of memory out of 3000000
  25916 multiletter control sequences out of 15000+200000
  550758 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,42p,1083b,514s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{theorem.145} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.129} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.126} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.116} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.105} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.101} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.158} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.92} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.80} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.75} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.21} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.37} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{theorem.30} has been referenced but does not exist,
- replaced by a fixed one
-
+<C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmb10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/8135t/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/8135t/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/813
+5t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 <C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmb10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/8135t/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/8135t/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/8135t
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/8135t/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/8135t/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/8
-135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/8135t/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/8135t/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/
-8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on pass_fold_glue.pdf (37 pages, 668216 bytes).
+m/cmmi6.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/8135t/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/8135t/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/8135t/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users
+/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb><C:/Users/8135t/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/8135t/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/8135t/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/User
+s/8135t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb>
+Output written on pass_fold_glue.pdf (37 pages, 666946 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 230 named destinations out of 1000 (max. 500000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
  248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

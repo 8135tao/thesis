@@ -82,31 +82,33 @@ To begin with, consider the asymptotic equation
 \end{equation}
 posed on $\sigma \in [0, L]$.
 Then the estimate \eqref{ode_est_a} holds for \eqref{asy_eq} since in this case we have
-\begin{align*}
+\begin{equation*}%\label{est:asy_eq}
+\begin{split}
 u(\sigma) &= e^{a_+(\sigma-L)}u_L + \int_L^t e^{a_+(\sigma-s)} f(s)ds \\ 
 &\le 2|u_L| + \left|\int_L^t e^{a_+(\sigma-s)}ds \right| |f|_\infty\\ 
 &\le  2|u_L|+\frac{1}{a_+} \left|e^{t-L}-1\right||f|\infty\\
 & \le 2(|u_L|+|f|_\infty ).
-\end{align*}
+\end{split}
+\end{equation*}
 
 Next, give $\eta>0$ small enough and independent of $L$, there exist $\sigma_* \le L$ such that $|a(\sigma)- a_+|< \eta$ for all $\sigma>\sigma*$. It is important to note here that one can choose $\sigma_*$ independent of $L$ as long as $L$ is large enough. A Neumann series argument shows that in this case the operator 
 \[ u \mapsto
  \left(\frac{d}{dt}u-a(t)u, u(L)\right)
 \] is a $\eta-$perturbation of the asymptotic operator
 \[ u \mapsto
- \left(\frac{d}{dt}u-a_+u, u(L)\right),
+ \left(\frac{d}{dt}u-a_+u, u(L)\right)
 \]
-as a densely defined operator on $\mathcal{C}^1(\sigma_*,L) \subset \mathcal{C}(\sigma_*,L)$, so similarly from step I, we conclude that 
-\[
+as a densely defined operator on $ \mathcal{C}(\sigma_*,L)$. So we conclude that 
+\begin{equation}\label{est:asy_eq}
 \sup_{\sigma \in (\sigma_*,L)} |u(\sigma)| \le C(|u|_L + |f|_\infty)
-\]
+\end{equation}
 for some constant $C$ independent of $L$.
 
 Finally, for $\sigma \in (0,\sigma_*)$, the solution is given by the following formula
 \[
-u(\sigma) = \exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right) u(\sigma_*) + \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)f(s)ds 
+u(\sigma) = \exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right) u(\sigma_*) + \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)f(s)ds .
 \]
-since $\sigma_*< \infty$ and does not depend on $L$, there exist a constant $C_1$ independent of $L$ so that 
+Since $\sigma_*< \infty$ and does not depend on $L$, there exist a constant $C_1$ independent of $L$ so that 
 \[
 \max\left\{ \left|\exp\left(\int^{\sigma}_{\sigma_*} a(\tau)d\tau\right)\right|, \left| \int_{\sigma_*}^{\sigma} \exp\left(-\int_{\sigma}^{s}a(\tau)d\tau\right)\right| \right\} \le C_1.
 \]
@@ -114,14 +116,14 @@ Moreover, the value $u(\sigma_*)$ satisfies
 \[
 u(\sigma_*) \le \sup_{\sigma \in (\sigma_*,L)} |u(\sigma)| \le C_2(u_L + |f|_\infty)
 \]
-for some constant $C_2$ independent of $L$ from the conclusion in step 2.
+for some constant $C_2$ independent of $L$ by \eqref{est:asy_eq}.
 Therefore on $[0,\sigma_*]$ the solution satisfies
 \[
-\sup_{\sigma \in [0,\sigma_*]}|u(\sigma)| \le C_1C_2(u_L+|f|_\infty) +C_1|f|_\infty \le C(u_L+|f|_\infty)
+\sup_{\sigma \in [0,\sigma_*]}|u(\sigma)| \le C_1C_2(u_L+|f|_\infty) +C_1|f|_\infty \le C(u_L+|f|_\infty),
 \]
 where the constant $C$ does not depend on $L$. Therefore we conclude that
 \[
-\sup_{\sigma \in [0,L]} = |u|_\infty \le C(u_L+|f|_\infty)
+\sup_{\sigma \in [0,L]} = |u|_\infty \le C(u_L+|f|_\infty),
 \]
 which is \eqref{ode_est_a}.
 %\cite{plantdisp}

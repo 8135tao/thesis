@@ -4,8 +4,11 @@
 \chapter{Introduction}
 \label{intro_chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Functional-analytic methods}
-Basically just another name for implicit function theorem.
+\section{Geometric and functional analytic methods in dynamical systems}
+Problems in Dynamical systems deals primarily with systems of ordinary differential equations (ODEs). In most introductory graduate classes about ODEs, two perspectives are often presented to the students: on one hand, we have the analysis approaches. The most obvious example is the proof of the basic existence and uniqueness theorem for a general $n-$dimensional system of ODEs, where one usually sees Banach's fixed point theorem for the first time. On the other hand, we have the geometric approaches that qualitatively describes the behavior of system of ODEs. One would think of phase-plane analysis, and perhaps the theory of invariant manifolds which proves to be essential in long-time behavior questions.
+
+While both approaches are important, this paper will focus on the first prospective for two main reasons. First, for problems beyond the traditional ODE-setting, it is easier to recast the problem in a functional analytic framework and extend known result. Second, we found that even in problems usually dealt by the geometric approaches, it is possible to give a conceptually cleaner and easier-to-follow proof when reinterpreting the problem using functional analysis. We shall demonstrate these two points via two examples. In the first example, we show how to extend results about radially symmetric solutions bifurcating from systems of partial differential equations to nonlocally coupled systems by appropriately set it up as a fixed point problem. In the second example, we revisit a problem from singular perturbation theory that is solved using the geometric blow-up method, and show that we can achieve the same result again by rewriting it as an appropriate fixed point problem with multiple parts.
+
 \section{Nonlocal spikes}\label{s:1}
 Much of the success of modeling has been based on infinitesimal descriptions of physical laws, leading to differential and partial differential equations as models for physical processes. However, many physical interactions are inherently nonlocal, at least at a coarser modeling level, leading to nonlocal spatial coupling, as well as dependence of time evolution on history. From a dynamical systems point of view, a natural question in this context is in how far nonlocally coupled equations may behave qualitatively differently from locally coupled problems. As usual, one can approach this question from several vantage points, striving in particular to point to phenomena where nonlocality generates new phenomena, or delineate situations where nonlocal and local equations behave in analogous fashions. Our contribution here is mainly towards the latter aspect, showing that local bifurcations in nonlocal systems produce coherent structures completely analogous to local systems. We will however also comment on phenomena that are qualitatively different as a result of nonlocality. 
 
@@ -21,7 +24,7 @@ and $\Nl(U;\mu)$ encodes nonlinear terms which depend on a parameter $\mu\sim 0$
 
 We are interested in the existence of spatially localized solutions $U(x)\to U_\infty$, $|x|\to\infty$ in the  prototypical setting of a transcritical bifurcation of spatially constant solutions $U(x)\equiv m$. 
 
-In the remainder of this introduction, we shall first provide some background and motivation for this kind of question, Section \ref{s:mot}, and then give precise assumptions and results in Sections \ref{s:set} and \ref{s:res}. We collect some standard notation used throughout at the end of the introduction. 
+In the remainder of the introduction for the first part, we shall first provide some background and motivation for this kind of question, Section \ref{s:mot}, and then give precise assumptions and results in Sections \ref{s:set} and \ref{s:res}. We collect some standard notation used throughout the first part at the end. 
 
 
 \subsection{Motivation}\label{s:mot}
@@ -232,7 +235,7 @@ We believe that our assumptions are to some extent sharp. The assumption $n < 6$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Passage through fold}
-In part 2 of this paper, we study singularly perturbed ordinary differential equations (ODEs) of the form
+In the second part of this paper, we study singularly perturbed ordinary differential equations (ODEs) of the form
 
 \begin{align}\label{intro_slow}
 \begin{split}
@@ -241,7 +244,7 @@ In part 2 of this paper, we study singularly perturbed ordinary differential equ
 \end{split}\hspace{0.2in} x\in \mathbb{R}^n, \hspace{0.2in} y \in \mathbb{R}^m, \hspace{0.2in} 0<\eps \ll 1,
 \end{align}
 where $f$ and $g$ are smooth functions.
-\subsection{Background --- geometric singular perturbation theory}
+\subsection{Background --- geometric singular perturbation theory and blow-up}
 
 The standard way of studying \eqref{intro_slow} is using methods from geometric singular perturbation theory. An brief overview of this theory involves treating \eqref{intro_slow}, which is referred to as the \textit{slow-system}, together with its  equivalent counterpart, the \textit{fast-system}:
 \begin{align}\label{intro_fast}
@@ -329,7 +332,7 @@ For $\eps$ sufficiently small, the following statements are true:
 
 In this paper, we focus on the same problem \eqref{ori_eqn} with an aim to recreate the result of Theorem \ref{ks_main} via a different, functional-analytical approach. Instead of proceeding with the geometrically-flavored blow-up approach, we directly prove a trajectory exists with the properties claimed in Theorem \ref{ks_main} by dividing the time of passage into appropriate parts and setting up a corresponding ansatz in each region, closing the arguments with carefully reformulating the existence question as a fixed-point argument.
 
-In more details, we first make a change of variable to transform \eqref{ori_eqn} into a more convenient form in Section \ref{euler_m}. Then we introduces the different ansatz used in Section \ref{Ric_def} and \ref{c_mfld}. We then give a statement of our main result in Section \ref{main_sum}.
+To summarize, we first make a change of variable to transform \eqref{ori_eqn} into a more convenient form in Section \ref{euler_m}. Then we introduces the different ansatz used in Section \ref{Ric_def} and \ref{c_mfld}. We then give a statement of our main result in Section \ref{main_sum}.
 \subsection{Euler multiplier}\label{euler_m}
 Let $\tau$ denote the independent time variable in \eqref{ori_eqn}, since for $u,\mu,\eps$ small, $g(u,\mu,\eps) = 1 + \rmO(u,\mu,\eps)>0$, we can define a new time $t = t(\tau)$ by $\frac{dt}{d\tau} = g$, consequently, \eqref{ori_eqn}  is transformed into
 \begin{align}\label{euler_ori_eqn}
@@ -389,7 +392,7 @@ More generally, we consider family of solutions  $u_R(s; u_0)$ of the Riccati eq
 In fact, using simple phase plane analysis, we can extend the asymptotic results about the special Riccati solution $\bar{u}_R$ to the family of solutions $u_R(s; u_0)$ as follows.
 
 \begin{Proposition}\label{para_ric}
-There exist $\eta>0$ small, so that for all initial condition $u_0$ with $|u_0- \bar{u}_0|<\eta$, there exist a number $\Omega_\infty=\Omega_\infty(u_0)$ which depends on $u_0$ smoothly, and a solution $u_R(s;u_0)$ of \eqref{ric} on $[0, \Omega_\infty(u_0))$ with the following asymptotic expansion as $s\to \Omega_\infty(u_0)$:
+There exist $\eta>0$ small, so that for all initial condition $u_0$ with $|u_0- \bar{u}_0|<\eta$, there exist a number $\Omega_\infty=\Omega_\infty(u_0)$ which depends on $u_0$ smoothly, and a solution $u_R(s;u_0)$ of \eqref{ric} on $[0, \Omega_\infty)$ with the following asymptotic expansion as $s\to \Omega_\infty$:
 \begin{equation}\label{ric_exp}
 u_R(s;u_0) = \frac{1}{\Omega_\infty-s} +  (\Omega_\infty-s) r(\Omega_\infty-s;u_0),
 \end{equation}
@@ -445,7 +448,7 @@ u_s(t) = -\sqrt{\delta-\eps t} + \rmO(|\delta-\eps t|).
 
 We now state our main result. Recall $\mathcal{U}$ is a neighborhood small enough so that \eqref{fold_nonlinearity} holds for $(\mu, u , \eps) \in \mathcal{U}$.
 
-\begin{Theorem}\label{thm:main}Let $\Omega_0$ be the constant defined in \eqref{ric_asy}.
+\begin{Theorem}[passage through fold]\label{thm:main}Let $\Omega_0$ be the constant defined in \eqref{ric_asy}.
 Fix $\delta_-, \delta_+>0$ and $\alpha$ with $0<\alpha <3/4$. There exist $\eps_0>0,$ a constant $C=C(\delta,\alpha),$ such that for all $0<\eps<\eps_0$ and $u_i$ with $|u_i -u_-(-\delta) | \le C\eps^{1-\alpha/3}$, a solution of the rescaled system 
 \begin{equation}\label{main_eqn}
 \begin{split}
